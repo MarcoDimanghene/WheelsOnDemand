@@ -5,7 +5,7 @@ export const GlobalStyles = createGlobalStyle `
     body {
         margin: 0;
         font-family: Roboto Condensed;
-        background-color: #171718;
+        background-color: #fff;
         height: 100%;
         width: 100%;
         
