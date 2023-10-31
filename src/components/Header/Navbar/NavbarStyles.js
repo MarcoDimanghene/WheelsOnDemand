@@ -1,55 +1,51 @@
 import styled from "styled-components"
 
-export const NavbarContainerStyled = styled.header`
+export const HeaderContainerStyled = styled.header`
+    height:auto;
+    width:100%;
+    border-bottom:4px solid black;
+    background: #242424;
+`
+export const NavbarContainerStyled=styled.div `
     height:80px;
     display: flex;
-    align-items: center;
+    align-items:center;
     justify-content: space-between;
-    border-bottom:4px solid black ;
-    background: linear-gradient(50deg, #000000, #800000);
-    
+    margin: auto;
+    width:100%;
+    max-width: 1400px;
 `
 
 export const LogoStyled = styled.div `
-    display: flex;
-    align-items: center;
-    height:90%;
-    margin: 10%;
+    width:35%;
     @media (max-width: 908px) {
-        height:50%;
+        width:20%;
         margin: 5%;
     }
 `
 export const ConeinerLinksStyled = styled.div `
-    display:flex;
-    align-items: center;
-    justify-content: center;
+    display: flex;
+    align-items:center;
     border-radius: 15px;
-    
-
+    margin:0 ;
     @media (max-width: 780px) {
         display: none
-        
     }
 `
 export const LinkStyled = styled.div`
     text-decoration: none;
-    
-    background: linear-gradient(45deg, #b0b0b0, #e0e0e0, #b0b0b0);
-    border: 1px solid #808080;
-    color: #333; 
+    color: white;
+    margin:0 15px 0;
     padding: 5px;
-    font-size: 1rem;
+    font-size: 1.5rem;
     border-radius: 10px;
-    margin-right: 25px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    
     
     &:hover {
-        background: linear-gradient(45deg, #a0a0a0, #d0d0d0, #a0a0a0); 
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+        border-bottom: 2px solid #fff;
+        background-color: #000;
     }
     @media (max-width: 980px) {
         font-size: 0.8rem;
@@ -58,13 +54,13 @@ export const LinkStyled = styled.div`
     }
     a {
         text-decoration:none;
-        color: #000;
+        color:white;
+        font-weight: 300;
     }
 `
 export const IconStyled = styled.span`
     vertical-align: middle; 
-    
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     @media (max-width: 980px) {
         font-size: 1rem;
         font-weight: 200px;
