@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HeroContainerStyled= styled.div `
     margin: auto;
-    max-width: 1200px;
+    max-width: 1400px;
 
 `
 export const TitleContainerStyled = styled.h1`
@@ -20,7 +20,7 @@ export const InfoContainerStyleded = styled.div`
     align-items: center;
     width:100%;
     img {
-        border-radius:25px;
+        border-radius:15%;
         width: 100%; 
         height: auto;
     }

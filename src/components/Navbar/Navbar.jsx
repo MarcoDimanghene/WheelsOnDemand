@@ -1,5 +1,5 @@
 import { ConeinerLinksStyled,  HeaderContainerStyled,  IconStyled,  LinkStyled, LogoStyled, MenuContainerStyled, NavbarContainerStyled } from "./NavbarStyles"
-import LogoCar from "../../Img/logoCar.png"
+import LogoCar from "../Img/logoCar.png"
 import {motion} from "framer-motion"
 import {BiSolidHome} from "react-icons/bi"
 import {AiTwotoneCar} from "react-icons/ai"

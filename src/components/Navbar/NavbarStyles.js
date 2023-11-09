@@ -2,7 +2,6 @@ import styled from "styled-components"
 
 export const HeaderContainerStyled = styled.header`
     height:auto;
-    width:100%;
     border-bottom:4px solid black;
     background: #242424;
 `
@@ -10,14 +9,11 @@ export const NavbarContainerStyled=styled.div `
     height:80px;
     display: flex;
     align-items:center;
-    justify-content: space-between;
-    margin: auto;
-    width:100%;
-    max-width: 1400px;
 `
 
 export const LogoStyled = styled.div `
-    width:35%;
+    margin-left:5%;
+    width:30%;
     @media (max-width: 908px) {
         width:20%;
         margin: 5%;
@@ -26,6 +22,8 @@ export const LogoStyled = styled.div `
 export const ConeinerLinksStyled = styled.div `
     display: flex;
     align-items:center;
+    justify-content: flex-end;
+    width:60%;
     border-radius: 15px;
     margin:0 ;
     @media (max-width: 780px) {
