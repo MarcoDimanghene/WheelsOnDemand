@@ -9,7 +9,7 @@ export const GlobalStyles = createGlobalStyle `
     body {
     margin: 0;
     padding: 0;
-    background: #ffff;
+    background: #081b29;
     font-family: 'Montserrat', sans-serif;
     color: white;
     -webkit-tap-highlight-color: transparent;

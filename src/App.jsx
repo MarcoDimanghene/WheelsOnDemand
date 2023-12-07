@@ -1,14 +1,17 @@
-import { Navbar } from "./components/Navbar/Navbar";
-import { Hero } from "./components/Hero/Hero";
 import Layout from "./components/Layout/Layout";
+import { BrowserRouter} from "react-router-dom";
+import Routes from './routes/Routes';
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
-    <>
-      <Layout>
-        <Navbar/>
-        <Hero/>
-      </Layout>
+    <> 
+      <BrowserRouter>
+        <Layout>
+          <Navbar/>          
+          <Routes/>
+        </Layout>
+      </BrowserRouter>
     </>
   )
 }
