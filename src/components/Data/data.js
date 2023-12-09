@@ -10,7 +10,9 @@ const CarsData = [
         price: 220000,
         stock: getRanndomStock(),
         img: 'url/toyota_corolla_image.jpg',
-        category: 'Sedan'
+        category: 'Sedan',
+        year: 2012,
+        km: 75000,
     },
     {
         id: 2,
@@ -19,7 +21,9 @@ const CarsData = [
         price: 22000,
         stock: getRanndomStock(),
         img: 'url/toyota_cross_image.jpg',
-        category: 'Suv'
+        category: 'Suv',
+        year: 2018,
+        km: 45000,
     },
     {
         id: 3,
@@ -28,7 +32,9 @@ const CarsData = [
         price: 22000,
         stock: 5,
         img: 'url/chevrolet_cruze_image.jpg',
-        category: 'Sedan'
+        category: 'Sedan',
+        year: 2015,
+        km: 60000,
     },
     {
         id: 4,
@@ -37,7 +43,9 @@ const CarsData = [
         price: 22000,
         stock: 5,
         img: 'url/toyota_etios_image.jpg',
-        category: 'Compacto'
+        category: 'Compacto',
+        year: 2013,
+        km: 80000,
     },
     {
         id: 5,
@@ -46,7 +54,9 @@ const CarsData = [
         price: 22000,
         stock: 5,
         img: 'url/ford_fiesta_image.jpg',
-        category: 'Compacto'
+        category: 'Compacto',
+        year: 2017,
+        km: 55000,
     },
     {
         id: 6,
@@ -55,7 +65,9 @@ const CarsData = [
         price: 22000,
         stock: 5,
         img: 'url/toyota_hilux_image.jpg',
-        category: 'Camioneta'
+        category: 'Camioneta',
+        year: 2016,
+        km: 70000,
     },
     {
         id: 7,
@@ -64,7 +76,9 @@ const CarsData = [
         price: 22000,
         stock: 5,
         img: 'url/volkswagen_nivus_image.jpg',
-        category: 'Suv'
+        category: 'Suv',
+        year: 2019,
+        km: 40000,
     },
     {
         id: 8,
@@ -73,7 +87,9 @@ const CarsData = [
         price: 22000,
         stock: 5,
         img: 'url/renault_oroch_image.jpg',
-        category: 'Camioneta'
+        category: 'Camioneta',
+        year: 2014,
+        km: 90000,
     },
     {
         id: 9,
@@ -82,7 +98,9 @@ const CarsData = [
         price: 22000,
         stock: 5,
         img: 'url/ford_ranger_image.jpg',
-        category: 'Suv'
+        category: 'Suv',
+        year: 2015,
+        km: 75000,
     },
     {
         id: 10,
@@ -91,7 +109,9 @@ const CarsData = [
         price: 22000,
         stock: 5,
         img: 'url/renault_sandero_image.jpg',
-        category: 'Compacto'
+        category: 'Compacto',
+        year: 2016,
+        km: 60000,
     },
     {
         id: 11,
@@ -100,7 +120,9 @@ const CarsData = [
         price: 22000,
         stock: 5,
         img: 'url/volkswagen_vento_image.jpg',
-        category: 'Sedan'
+        category: 'Sedan',
+        year: 2017,
+        km: 55000,
     },
     {
         id: 12,
@@ -109,7 +131,9 @@ const CarsData = [
         price: 22000,
         stock: 5,
         img: 'url/fiat_toro_image.jpg',
-        category: 'Camioneta'
+        category: 'Camioneta',
+        year: 2018,
+        km: 45000,
     },
     {
         id: 13,
@@ -118,7 +142,9 @@ const CarsData = [
         price: 30000,
         stock: 5,
         img: 'url/honda_accord_image.jpg',
-        category: 'Sedan'
+        category: 'Sedan',
+        year: 2019,
+        km: 40000,
     },
     {
         id: 14,
@@ -127,7 +153,9 @@ const CarsData = [
         price: 32000,
         stock: 5,
         img: 'url/nissan_rogue_image.jpg',
-        category: 'Suv'
+        category: 'Suv',
+        year: 2020,
+        km: 30000,
     },
     {
         id: 15,
@@ -136,7 +164,9 @@ const CarsData = [
         price: 34000,
         stock: 5,
         img: 'url/mazda_cx5_image.jpg',
-        category: 'Suv'
+        category: 'Suv',
+        year: 2021,
+        km: 25000,
     },
     {
         id: 16,
@@ -145,7 +175,9 @@ const CarsData = [
         price: 20000,
         stock: 5,
         img: 'url/hyundai_elantra_image.jpg',
-        category: 'Compacto'
+        category: 'Compacto',
+        year: 2015,
+        km: 70000,
     },
     {
         id: 17,
@@ -154,7 +186,9 @@ const CarsData = [
         price: 22000,
         stock: 5,
         img: 'url/kia_soul_image.jpg',
-        category: 'Compacto'
+        category: 'Compacto',
+        year: 2016,
+        km: 60000,
     },
     {
         id: 18,
@@ -163,7 +197,9 @@ const CarsData = [
         price: 38000,
         stock: 5,
         img: 'url/jeep_wrangler_image.jpg',
-        category: 'Suv'
+        category: 'Suv',
+        year: 2017,
+        km: 55000,
     },
     {
         id: 19,
@@ -172,7 +208,9 @@ const CarsData = [
         price: 36000,
         stock: 5,
         img: 'url/subaru_outback_image.jpg',
-        category: 'Suv'
+        category: 'Suv',
+        year: 2018,
+        km: 45000,
     },
     {
         id: 20,
@@ -181,6 +219,13 @@ const CarsData = [
         price: 42000,
         stock: 5,
         img: 'url/audi_a4_image.jpg',
-        category: 'Sedan'
-    }]
+        category: 'Sedan',
+        year: 2019,
+        km: 30000,
+    }
+];
+
+console.log(CarsData);
+
+
 console.log(CarsData)

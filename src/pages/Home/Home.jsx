@@ -15,7 +15,7 @@ import {
             {/* Recomendados Section */}
                 <RecomendadosWrapper>
                     <h2>Hoy te recomendamos</h2>
-                    {/* <CardsRecomendacion /> */}
+                    {/* <CardsRecommended /> */}
                 </RecomendadosWrapper>
 
             {/* Categorias Section */}

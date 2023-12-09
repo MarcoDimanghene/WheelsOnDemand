@@ -40,7 +40,7 @@ function Navbar() {
                         <NavLinkStyled onClick={closeMenu} to='/'> <IconStyled> <BiSolidHome /> </IconStyled>Inicio</NavLinkStyled>
                     </motion.div>
                     <motion.div whileTap={{scale: 0.95}}>
-                        <NavLinkStyled onClick={closeMenu} to='cars'> <IconStyled> <AiTwotoneCar/> </IconStyled>Vehiculos</NavLinkStyled>
+                        <NavLinkStyled onClick={closeMenu} to='products'> <IconStyled> <AiTwotoneCar/> </IconStyled>Vehiculos</NavLinkStyled>
                     </motion.div>
                     <motion.div whileTap={{scale: 0.95}}>
                         <NavLinkStyled onClick={closeMenu} to='info'> <IconStyled> <BsFillInfoSquareFill/> </IconStyled> Informacion</NavLinkStyled>
