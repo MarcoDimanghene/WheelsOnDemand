@@ -1,4 +1,4 @@
-import { LogginBtnStyled } from "../../components/UI/Button/ButtonStyled";
+import Button from "../../components/UI/Button/Button";
 import { InputStyled, LblLoginStyled } from "../../components/UI/Input/InputStyled";
 import { TxtStyled, InfoTxtStyled } from "../../components/UI/Textformat/TxtStyled";
 import {  IconSpanStyled,  InfotextContStyled,  LinkTxtStyled, LogginConteinerStyled, LoggintFormStyled, TitleStyled,  WrapperLoginStyled} from "./LoginStyled"
@@ -27,7 +27,7 @@ const Login = () => {
                     <TxtStyled>Tienes cuentas?  
                         <LinkTxtStyled to='register'>Registrate</LinkTxtStyled>
                     </TxtStyled>
-                    <LogginBtnStyled>Ingresar</LogginBtnStyled>
+                    <Button whileTap={{ scale: 0.95 }}>Ingresar</Button>
                 </LoggintFormStyled>
                 
                 <InfotextContStyled>

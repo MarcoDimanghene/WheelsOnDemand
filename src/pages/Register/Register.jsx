@@ -1,4 +1,4 @@
-import { LogginBtnStyled } from "../../components/UI/Button/ButtonStyled";
+import Button from "../../components/UI/Button/Button";
 import { InputStyled, LblLoginStyled } from "../../components/UI/Input/InputStyled";
 import {  InfoTxtStyled,  TxtStyled } from "../../components/UI/Textformat/TxtStyled";
 import {  IconRegSpanStyled, LinkloginStyled, RegConteinerStyled, RegFormStyled, RegInfoContStyled, RegTitleStyled, WrapperRegisterStyled } from "./RegisterStyled";
@@ -38,7 +38,7 @@ const Register = () => {
                 <TxtStyled>Ya tienes cuenta? 
                 <LinkloginStyled to="/login">Login</LinkloginStyled>
                 </TxtStyled>
-                <LogginBtnStyled>Registrate</LogginBtnStyled>
+                <Button whileTap={{ scale: 0.95 }}>Registrate</Button>
             </RegFormStyled>
                 
         </RegConteinerStyled>

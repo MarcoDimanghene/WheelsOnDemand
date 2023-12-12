@@ -1,9 +1,14 @@
 import styled from "styled-components";
+import imghero from "../Img/heroimg.jpg"
 
 export const HeroContainerStyled= styled.div `
-    margin: auto;
     max-width: 1400px;
-    background-color: #fff
+    box-shadow: 0 0 25px #0ef;
+    padding:0;
+    background-image: url(${imghero});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 `
 export const TitleContainerStyled = styled.h1`
     color: #fff;
@@ -41,15 +46,16 @@ export const ImgContainerStyled = styled.div`
     }
 `
 export const TextContainerStyled = styled.div`
-    color:#000;
+    color:#fff;
     width: 40%;
     padding:15px;
+    backdrop-filter: blur(100px);
+    border-radius:30px;
     p{
         font-size: 1.5rem;
     }
     @media (max-width: 850px) {
         p{
-        
         font-size: 1rem;
         }
     }

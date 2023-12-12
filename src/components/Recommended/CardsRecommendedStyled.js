@@ -10,7 +10,7 @@ export const CardsContainer = styled.div`
     &::-webkit-scrollbar{
         height:6px;
         width:4px;
-        background:transparent;
+        
     }
     &::-webkit-scrollbar-thumb{
         background: #081B29;
