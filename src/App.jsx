@@ -1,7 +1,8 @@
 import Layout from "./components/Layout/Layout";
-import { BrowserRouter} from "react-router-dom";
+
 import Routes from './routes/Routes';
 import Navbar from "./components/Navbar/Navbar";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
           <Navbar/>          
           <Routes/>
         </Layout>
-      </BrowserRouter>
+        </BrowserRouter>
     </>
   )
 }

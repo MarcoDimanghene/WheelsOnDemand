@@ -22,8 +22,9 @@ const CardRecomendacion = ({name, price, img1}) => {
             <CardTitle>{name}</CardTitle>
             
             <CardPrice>{formatPrice(price)}</CardPrice>
+            <Button onClick={e => e.preventDefault()}>Agregar</Button>
         </CardText>
-        <Button onClick={e => e.preventDefault()}>Agregar</Button>
+        
     </Card>
 );
 };

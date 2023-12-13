@@ -13,7 +13,7 @@ export const CardsContainer = styled.div`
         
     }
     &::-webkit-scrollbar-thumb{
-        background: #081B29;
+        background: #fff;
         border-radius: 5px;
     }
     &::-webkit-scrollbar:vertical {
@@ -27,12 +27,12 @@ export const Card= styled.div`
     gap:1rem;
     height: 103px;
     padding: 1rem 1.7rem;
-    background: #081B29;
+    background: black;
     border-radius: 10px;
 `
 export const CardImg = styled.img `
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
     border-radius: 16px;
     object-fit: cover;
 `
