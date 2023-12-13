@@ -1,9 +1,13 @@
 
+import CardsProducts from "../../components/Products/CardsProducts"
+import { ProducsContainer } from "./ProductsStyled"
+
 
 const Cars = () => {
     return (
-    <div>ESTOY MAKETANDO FIERA ESTO ES VEHICULOS</div>
-        
+        <ProducsContainer>
+            <CardsProducts/> 
+        </ProducsContainer>
     )
 }
 

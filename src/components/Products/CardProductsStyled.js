@@ -1,46 +1,27 @@
 import styled from "styled-components";
 
 export const CardsContainer = styled.div`
-    display: grid;
-    grid-template-columns: ${({gridLength}) => `repeat(${gridLength}, 1fr)`};
-    gap: 20px;
-    padding: 1rem;
-    overflow: scroll;
-
-    &::-webkit-scrollbar{
-        height:6px;
-        width:4px;
-        
-    }
-    &::-webkit-scrollbar-thumb{
-        background: #081B29;
-        border-radius: 5px;
-    }
-    &::-webkit-scrollbar:vertical {
-    display: none;
-    }
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-wrap: wrap;
 `
 export const Card= styled.div`
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:1rem;
-    height: 103px;
-    padding: 1rem 1.7rem;
-    background: #081B29;
-    border-radius: 10px;
+    width:300px;
+    height:350px;
+    margin: 15px auto;
+    background-color:black;
+    padding: 25px;
 `
 export const CardImg = styled.img `
-    width: 80px;
-    height: 80px;
-    border-radius: 16px;
+    width:80px;
+    height:80px;
     object-fit: cover;
 `
 export const CardText = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    width: 220px;
+    width: 70%;
 `
 export const CardTitle = styled.h2`
     margin: 0;
