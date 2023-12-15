@@ -5,7 +5,7 @@ import { CardsContainer } from "./CardProductsStyled"
 
 const CardsProducts = () =>{
     return(
-        <CardsContainer>
+        <CardsContainer gridLength="3">
             {
             carsdata.map((carsdata) =>{
                 return <CardProducts {...carsdata} key={carsdata.id}/>

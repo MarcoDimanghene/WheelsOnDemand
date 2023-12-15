@@ -5,6 +5,7 @@ import Button from '../UI/Button/Button';
 
 import {
     Card,
+    CardContImg,
     CardImg,
     CardPrice,
     CardText,
@@ -12,25 +13,22 @@ import {
     InfoCard
 } from './CardProductsStyled';
 
-const CardProducts = ({name, price, img1, img2, category, description,}) => {
+const CardProducts = ({name, price, img1, img2}) => {
     return (
     <Card>
         <CardTitle>{name}</CardTitle>
-        <CardImg
-        src={img1}
-        alt= {name}
-        />
-        <CardImg
-        src={img2}
-        alt= {name}
-        />
+        <CardContImg>
+            <CardImg
+            src={img1}
+            alt= {name}
+            />
+            <CardImg
+            src={img2}
+            alt= {name}
+            />
+        </CardContImg>
         <CardText>
-            
-            
-            <InfoCard>{description} </InfoCard>
             <CardPrice>{formatPrice(price)}</CardPrice>
-            <InfoCard>{category} </InfoCard>
-            
         </CardText>
         <Button onClick={e => e.preventDefault()}>Agregar</Button>
     </Card>
