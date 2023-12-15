@@ -1,5 +1,14 @@
 import styled from "styled-components";
 
+export const CarsContainer = styled.div `
+    width:100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+`
+
 export const CardsContainer = styled.div`
     display: grid;
     grid-template-columns: ${({gridLength}) => `repeat(${gridLength}, 1fr)`};

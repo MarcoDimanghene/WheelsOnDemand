@@ -13,9 +13,9 @@ import {
     InfoCard
 } from './CardProductsStyled';
 
-const CardProducts = ({name, price, img1, img2}) => {
+const CardProducts = ({id, name, price, img1, img2, onClick, year, km, description }) => {
     return (
-    <Card>
+    <Card onClick ={()=> onClick({id, name, price, year, km, img1, img2, description})}>
         <CardTitle>{name}</CardTitle>
         <CardContImg>
             <CardImg

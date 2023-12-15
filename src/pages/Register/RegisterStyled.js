@@ -11,7 +11,7 @@ export const WrapperRegisterStyled = styled.div `
 `
 export const RegConteinerStyled = styled.div `
     width:80%;
-    height:70%;
+    height:90%;
     max-width: 800px;
     background: transparent;
     border: 2px solid #0ef;
