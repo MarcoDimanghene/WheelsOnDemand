@@ -1,4 +1,4 @@
-
+import Categorias from "../../components/Categories/Categorias";
 import CardsProducts from "../../components/Products/CardsProducts"
 import { ProducsContainer } from "./ProductsStyled"
 
@@ -8,6 +8,8 @@ import { ProducsContainer } from "./ProductsStyled"
         
         return (
             <ProducsContainer>
+                <h3>Categorias</h3>
+                <Categorias/>
                 <CardsProducts/> 
             </ProducsContainer>
         )

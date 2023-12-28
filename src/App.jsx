@@ -9,7 +9,7 @@ function App() {
     <> 
       <BrowserRouter>
         <Layout>
-          <Navbar/>          
+          <Navbar/> 
           <Routes/>
         </Layout>
         </BrowserRouter>

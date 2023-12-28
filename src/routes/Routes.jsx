@@ -5,6 +5,7 @@ import Register from '../pages/Register/Register';
 import Cars from '../pages/Products/Products';
 
 
+
 const Routes = () => {
     return (
         <ReactDomRoutes>
@@ -19,5 +20,8 @@ const Routes = () => {
         </ReactDomRoutes>
     )
 }
+
+
+
 
 export default Routes

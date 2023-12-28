@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-//import fondo from "../assets/fondo4.jpg"
+import '@fontsource-variable/onest'
 
 export const GlobalStyles = createGlobalStyle `
     html{
@@ -10,7 +10,7 @@ export const GlobalStyles = createGlobalStyle `
     margin: 0;
     padding: 0;
     background: #081b29;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Onest Variable', sans-serif;
     color: white;
     -webkit-tap-highlight-color: transparent;
     overflow-x: hidden

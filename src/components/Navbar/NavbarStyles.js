@@ -5,8 +5,8 @@ export const HeaderContainerStyled = styled.header`
     height:auto;
     background: #081b29;
     width:100%;
-    
-`
+`;
+
 export const NavbarContainerStyled=styled.div `
     height:80px;
     display: flex;

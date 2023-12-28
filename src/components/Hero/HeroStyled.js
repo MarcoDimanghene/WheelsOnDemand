@@ -31,9 +31,9 @@ export const InfoContainerStyled = styled.div`
     justify-content: space-around;
     align-items: center;
     width:100%;
+    height: 400px;
     img {
         border-radius:15%;
-        width: 100%; 
         height: auto;
     }
 `
@@ -47,9 +47,12 @@ export const ImgContainerStyled = styled.div`
 `
 export const TextContainerStyled = styled.div`
     color:#fff;
-    width: 40%;
+    width: 90%;
+    height: 60%;
     padding:15px;
-    backdrop-filter: blur(100px);
+    margin: auto;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius:30px;
     p{
         font-size: 1.5rem;
