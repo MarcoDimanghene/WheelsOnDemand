@@ -11,6 +11,7 @@ import {
     
 } from './CardsRecommendedStyled';
 
+// eslint-disable-next-line react/prop-types
 const CardRecomendacion = ({name, price, img1}) => {
     return (
     <Card>

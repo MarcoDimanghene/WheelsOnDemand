@@ -6,22 +6,12 @@ export const ProducsContainer = styled.div `
     margin: auto;
     position: relative;
 `
-
-export const ProductsFilterCat = styled.div `
-    max-width: 1200px;
-    width:100%;
-    height:60px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-`
 export const CategoriesStyled = styled.button `
     position: relative;
     margin-left: 5px;
     height: 35px;
-    background: ${({ isActive }) => (isActive ? '#01CDDC' : 'black')};
-    color: ${({ isActive }) => (isActive ? '#fff' : 'black')};
+    background: #01CDDC;
+    
     outline: none;
     cursor: pointer;
     font-size: 1.3rem;

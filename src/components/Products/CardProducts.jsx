@@ -1,5 +1,4 @@
 import { formatPrice } from '../../utils/index';
-
 import Button from '../UI/Button/Button';
 
 
@@ -10,12 +9,15 @@ import {
     CardPrice,
     CardText,
     CardTitle,
-    InfoCard
 } from './CardProductsStyled';
 
-const CardProducts = ({id, name, price, img1, img2, onClick, year, km, description }) => {
+// eslint-disable-next-line react/prop-types, no-unused-vars
+const CardProducts = ({ id, name, price, img1, img2, year, km, description }) => {
+    
+
     return (
-    <Card onClick ={()=> onClick({id, name, price, year, km, img1, img2, description})}>
+    <Card >
+        
         <CardTitle>{name}</CardTitle>
         <CardContImg>
             <CardImg

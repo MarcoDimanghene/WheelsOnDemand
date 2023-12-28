@@ -1,19 +1,26 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import persistReducer from "redux-persist/es/persistReducer";
-import persistStore from "redux-persist/lib/persistStore";
-import storage from "redux-persist/lib/storage";
+import recommendedReducer from"./recommended/recommendedSlice";
 
-const reducers = combineReducers ({});
+import { persistReducer, persistStore } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+import producsReducer from "./products/productsSlice";
 
-const presistConfig = {
+
+const reducers = combineReducers ({
+    recommended: recommendedReducer,
+    products: producsReducer
+});
+
+const persistConfig = {
     key: "root",
     storage,
-}
+};
 
-const persitedRedurcer = persistReducer(presistConfig, reducers);
+const persistedReducer  = persistReducer(persistConfig, reducers);
 
 export const store = configureStore({
-    reducer: persitedRedurcer,
+    reducer: persistedReducer ,
 });
 
 export const persistor = persistStore(store)
+

@@ -1,15 +1,16 @@
 import CardRecomendacion from "./CardRecommended";
 import { CardsContainer } from "./CardsRecommendedStyled";
-import { carsdata } from "../Data/data";
+import { useSelector } from "react-redux";
 
 const CardsRecomendacion = () => {
+    
+    const recommended = useSelector(state => state.recommended.recommended);
+
     return (
-    <CardsContainer gridLength={carsdata.length}>
-        {
-            carsdata.map((carsdata) =>{
-                return <CardRecomendacion {...carsdata} key={carsdata.id}/>
-            })
-            }
+    <CardsContainer gridLength={recommended.length}>
+        {recommended.map((recommended) => (
+        <CardRecomendacion key={recommended.id} {...recommended} />
+        ))}
 
     </CardsContainer>
     );

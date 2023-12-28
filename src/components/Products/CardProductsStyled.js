@@ -59,6 +59,11 @@ export const CardPrice = styled.span`
     font-weight: 800;
     font-size: 1.5rem;
     background: linear-gradient(83deg, #ffa100, #fb103d);
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+`
+
+export const ButtonContainerStyled=styled.div `
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `
