@@ -1,20 +1,27 @@
-import Button from "../../components/UI/Button/Button";
 import { InputStyled, LblLoginStyled } from "../../components/UI/Input/InputStyled";
-import {  InfoTxtStyled,  TxtStyled } from "../../components/UI/Textformat/TxtStyled";
+import {  InfoTxtStyled,  StrongeStyled,  TxtStyled } from "../../components/UI/Textformat/TxtStyled";
 import {  IconRegSpanStyled, LinkloginStyled, RegConteinerStyled, RegFormStyled, RegInfoContStyled, RegTitleStyled, WrapperRegisterStyled } from "./RegisterStyled";
 import { FaLock, FaUser } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { FadeVariants } from "../../utils";
+import { ButtonUserStyled } from "../Login/LoginStyled";
 
 const Register = () => {
+    
     return (
-    <WrapperRegisterStyled>
+    <WrapperRegisterStyled
+        variants={FadeVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+    >
         <RegConteinerStyled>
             <RegInfoContStyled>
                 <RegTitleStyled>
                     Registrate y Accede
                 </RegTitleStyled>
                 <InfoTxtStyled>Únete ahora para desbloquear 
-                    beneficios exclusivos y experiencias personalizadas. ¡Regístrate hoy!
+                    beneficios exclusivos y experiencias personalizadas. <StrongeStyled>¡Regístrate hoy!</StrongeStyled>
                 </InfoTxtStyled>
             </RegInfoContStyled>
 
@@ -38,7 +45,7 @@ const Register = () => {
                 <TxtStyled>Ya tienes cuenta? 
                 <LinkloginStyled to="/login">Login</LinkloginStyled>
                 </TxtStyled>
-                <Button whileTap={{ scale: 0.95 }}>Registrate</Button>
+                <ButtonUserStyled whileTap={{ scale: 0.9 }}>Registrate</ButtonUserStyled>
             </RegFormStyled>
                 
         </RegConteinerStyled>

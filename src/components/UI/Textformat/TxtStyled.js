@@ -8,9 +8,16 @@ export const TxtStyled = styled.h2`
     
     `
 
-export const InfoTxtStyled = styled(TxtStyled) `
+export const InfoTxtStyled = styled.p `
     color: #fff;
     font-size:1.2rem;
+    font-weight: 150;
     text-align: right;
     padding: 0 40px 60px 50px;
+    
+`
+export const StrongeStyled = styled.strong`
+    font-weight: 650;
+    margin:0;
+    text-align: left;
 `

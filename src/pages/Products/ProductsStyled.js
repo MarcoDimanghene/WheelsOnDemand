@@ -1,7 +1,8 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 
-export const ProducsContainer = styled.div `
+export const ProducsContainer = styled(motion.div) `
     max-width: 1200px;
     margin: auto;
     position: relative;

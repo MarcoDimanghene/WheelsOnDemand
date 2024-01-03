@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import styled, { css } from "styled-components";
 
-export const BtnStyled = styled(motion.button) `
+export const ButtonStyled = styled(motion.button) `
     position: relative;
-    width: 80%;
+    margin: auto;
+    width: 50%;
     height: 45px;
-    background: linear-gradient(#081b29, #0ef, #081b29 );
-    border: 2px solid #0ef;
+    background: #081B29;
+    border: 2px solid #fff;
     outline: none;
     border-radius: ${({ radius }) => `${radius}px`};
     cursor: pointer;
@@ -16,8 +17,8 @@ export const BtnStyled = styled(motion.button) `
     transition: 0.8s;
     overflow: hidden;
     &:hover{
-        
         opacity: 95%;
+        scale: 1.1em;
     }
     &:disabled {
     cursor: not-allowed;
@@ -33,5 +34,7 @@ export const BtnStyled = styled(motion.button) `
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
         }
+    
     `}
 `;
+

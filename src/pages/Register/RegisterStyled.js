@@ -1,7 +1,8 @@
+import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import styled from "styled-components"
 
-export const WrapperRegisterStyled = styled.div `
+export const WrapperRegisterStyled = styled(motion.div) `
     display: flex;
     align-items:center;
     justify-content:center;
@@ -35,6 +36,7 @@ export const LinkloginStyled = styled(Link) `
     color: darkcyan;
     cursor: pointer;
     margin: 0.5rem;
+    font-weight:650;
     `
 
 export const RegInfoContStyled = styled.div `

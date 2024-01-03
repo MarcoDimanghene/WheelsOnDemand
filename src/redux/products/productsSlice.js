@@ -3,6 +3,7 @@ import { carsdata } from "../../Data/data";
 
 const INITIAL_STATE = {
     products: carsdata,
+    selctid: null,
 };
 
 export const productsSlice = createSlice({
@@ -12,12 +13,16 @@ export const productsSlice = createSlice({
         getProducts: state  => {
         return state ;
         },
+        selectProductById: (state, action) => {
+            const selectedId = action.payload;
+            state.selctid = selectedId;
+        },
     }
 });
 
 
 
 
-export const { getProducts } = productsSlice.actions;
+export const { getProducts, selectProductById } = productsSlice.actions;
 
 export default productsSlice.reducer;

@@ -10,7 +10,7 @@ export const Categoria = ({ title, category }) => {
     const dispatch = useDispatch();
 
     const handleClick = () => {
-        console.log(`Clic en la categoría: ${category}`);
+        
         dispatch(selectCategory(category));
     };
     return (

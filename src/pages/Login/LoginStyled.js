@@ -1,7 +1,8 @@
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const WrapperLoginStyled = styled.div `
+export const WrapperLoginStyled = styled(motion.div) `
     display: flex;
     align-items:center;
     justify-content:center;
@@ -33,12 +34,9 @@ export const LoggintFormStyled = styled.form `
     border-radius: 15px;
 `
 
-
-
-
 export const LinkTxtStyled = styled(Link) `
     font-size:1rem;
-    font-weight: normal;
+    font-weight: 600;
     color: darkcyan;
     cursor: pointer;
     margin-left: 1em;
@@ -64,3 +62,22 @@ export const TitleStyled = styled.h2`
     text-align: right;
     padding: 0 40px 0 50px;
 `
+export const ButtonUserStyled = styled(motion.button) `
+    position: relative;
+    width: 60%;
+    height: 45px;
+    background: linear-gradient(#081b29, #0ef, #081b29 );
+    border: 2px solid #0ef;
+    outline: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.8s;
+    overflow: hidden;
+    transition: 0.5;
+    &:hover{
+        opacity: 50%;
+        scale: 1.1;
+    }`;

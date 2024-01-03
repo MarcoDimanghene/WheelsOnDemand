@@ -1,13 +1,21 @@
 import { Hero } from '../../components/Hero/Hero';
 import Cardsrecommended from '../../components/Recommended/CardsRecommended';
+import { FadeVariants } from '../../utils';
 import {
     HomeWrapper,
     RecomendadosWrapper,
     } from './HomeStyles';
+    
 
     function Home() {
+        
         return (
-            <HomeWrapper>
+            <HomeWrapper 
+            variants={FadeVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            >
                 {/* Hero Section */}
                 <Hero/>
 

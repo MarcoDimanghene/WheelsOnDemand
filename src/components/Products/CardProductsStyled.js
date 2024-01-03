@@ -12,6 +12,8 @@ export const CarsContainer = styled.div `
 export const CardsContainer = styled.div`
     display: grid;
     grid-template-columns: ${({gridLength}) => `repeat(${gridLength}, 1fr)`};
+    background-color: black;
+    border-radius: 10px;
 `
 export const Card= styled.div`
     display: flex;
@@ -20,10 +22,10 @@ export const Card= styled.div`
     flex-direction: column;
     border-radius:15px;
     width:auto;
-    height:240px;
+    height:200px;
     margin:1rem;
-    background-color:black;
-    padding: 0.5rem;
+    background-color:#24272B;
+    padding: 0.2rem;
     box-shadow: 0 0 25px #0ef;
 `
 export const CardContImg = styled.div`
@@ -32,8 +34,8 @@ export const CardContImg = styled.div`
     width: 100%;
 `
 export const CardImg = styled.img `
-    width:80px;
-    height:80px;
+    width:100px;
+    height:100px;
     object-fit: cover;
     margin: auto;
 `
@@ -45,7 +47,7 @@ export const CardText = styled.div`
 export const CardTitle = styled.h2`
     margin: 0;
     margin-bottom: 5px;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 0.05rem;
 `
 
@@ -57,13 +59,17 @@ export const InfoCard = styled.p`
 
 export const CardPrice = styled.span`
     font-weight: 800;
-    font-size: 1.5rem;
-    background: linear-gradient(83deg, #ffa100, #fb103d);
+    font-size: 1.2rem;
+    background:  #fb103d;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    
 `
 
 export const ButtonContainerStyled=styled.div `
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    width:70%;
+    
 `

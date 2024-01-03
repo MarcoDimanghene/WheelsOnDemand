@@ -19,28 +19,30 @@ export const CardsContainer = styled.div`
     &::-webkit-scrollbar:vertical {
     display: none;
     }
+    
 `
 export const Card= styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
-    gap:1rem;
     height: 103px;
     padding: 1rem 1.7rem;
-    background: black;
+    background: #24272B;
     border-radius: 10px;
 `
 export const CardImg = styled.img `
     width: 120px;
     height: 120px;
-    border-radius: 16px;
+    border-radius: 50px;
     object-fit: cover;
 `
 export const CardText = styled.div`
     display: flex;
+    align-items: end;
     flex-direction: column;
     gap: 5px;
-    width: 220px;
+    min-width:220px;
+    
 `
 export const CardTitle = styled.h2`
     margin: 0;
@@ -56,9 +58,9 @@ export const InfoCard = styled.p`
 `
 
 export const CardPrice = styled.span`
-    font-weight: 800;
+    font-weight: 600;
     font-size: 1.5rem;
-    background: linear-gradient(83deg, #ffa100, #fb103d);
+    background:  #fb103d;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 `

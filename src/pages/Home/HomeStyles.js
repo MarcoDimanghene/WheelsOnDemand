@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const HomeWrapper = styled.div `
+export const HomeWrapper = styled(motion.div) `
     padding: 2rem;
-    
     max-width:1400px;
     margin: auto;
+    
 `
 export const RecomendadosWrapper = styled.section`
     padding:5px;
