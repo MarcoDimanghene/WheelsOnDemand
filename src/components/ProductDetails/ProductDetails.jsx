@@ -1,8 +1,8 @@
-  import { CatStyled, ImgContStyled, ImgStyled, ProducContStyled, SubtitleStyled, TitleStyled, TxtContStyled, TxtinfoStyled } from './ProductDetailsStyled'
+  import { BtnDetailsStyled, CatStyled, ImgContStyled, ImgStyled, ProducContStyled, SubtitleStyled, TitleStyled, TxtContStyled, TxtinfoStyled } from './ProductDetailsStyled'
 import { useSelector } from 'react-redux';
 import { FadeVariants, formatPrice } from '../../utils/index';
+import { StrongeStyled } from '../UI/Textformat/TxtStyled';
 import { useParams } from 'react-router-dom';
-import Button from '../UI/Button/Button';
 
 
 const ProductDetails = () => {
@@ -34,15 +34,17 @@ const ProductDetails = () => {
         <ImgStyled src={img1} alt= {name}></ImgStyled>
         <ImgStyled src={img2} alt= {name}></ImgStyled>
       </ImgContStyled>
-      <CatStyled>Tipo: {category} </CatStyled>
+        <CatStyled>Tipo: {category} </CatStyled>
+        
       <TxtContStyled>
-        <SubtitleStyled>Precio: {formatPrice(price)}</SubtitleStyled>
-        <SubtitleStyled>Año: {year}</SubtitleStyled>
-        <SubtitleStyled>Kilometrage: {km}</SubtitleStyled>
+        <SubtitleStyled><StrongeStyled>Precio: </StrongeStyled>{formatPrice(price)}</SubtitleStyled>
+        <SubtitleStyled><StrongeStyled>Año: </StrongeStyled> {year}</SubtitleStyled>
+        <SubtitleStyled><StrongeStyled>Kilometrage: </StrongeStyled>{km}</SubtitleStyled>
         
       </TxtContStyled>
-      
-      <Button onClick={e => e.preventDefault()}>Agregar</Button>
+      <TxtContStyled>
+        <BtnDetailsStyled  onClick={e => e.preventDefault()}>Agregar</BtnDetailsStyled>
+      </TxtContStyled>
     </ProducContStyled>
   );
 };

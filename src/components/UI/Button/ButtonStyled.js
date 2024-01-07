@@ -4,9 +4,9 @@ import styled, { css } from "styled-components";
 export const ButtonStyled = styled(motion.button) `
     position: relative;
     margin: auto;
-    width: 50%;
-    height: 45px;
-    background: #081B29;
+    width: ${props => props.width || 'auto'};
+    height: 30px;
+    background: #000;
     border: 2px solid #fff;
     outline: none;
     border-radius: ${({ radius }) => `${radius}px`};

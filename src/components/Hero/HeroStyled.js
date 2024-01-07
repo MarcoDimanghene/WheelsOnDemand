@@ -17,8 +17,6 @@ const changeBackground = keyframes`
     `)}
 `;
 
-
-
 export const HeroContainerStyled= styled.div `
     max-width: 1400px;
     box-shadow: 0 0 25px #0ef;

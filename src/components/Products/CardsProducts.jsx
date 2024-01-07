@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux"
 import CardProducts from "./CardProducts"
-import {  CardsContainer } from "./CardProductsStyled"
+import {  ButtonContainerStyled, CardsContainer } from "./CardProductsStyled"
+import Button from "../UI/Button/Button";
 
 
 const CardsProducts = () => {
@@ -14,7 +15,13 @@ const CardsProducts = () => {
                 {Object.entries(products).map(([productId, cars]) => (
                     <CardProducts key={productId} {...cars} />
                 ))}
+            
             </CardsContainer>
+            <ButtonContainerStyled>
+                <Button>Ver Menos</Button>
+                <Button>Ver Mas</Button>
+            </ButtonContainerStyled>
+            
         </>
     );
 }

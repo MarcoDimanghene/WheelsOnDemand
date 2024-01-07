@@ -1,4 +1,4 @@
-import {  HeroContainerStyled, InfoContainerStyled, TextContainerStyled, TitleContainerStyled } from "./HeroStyled"
+import {  HeroContainerStyled, InfoContainerStyled,  TitleContainerStyled } from "./HeroStyled"
 
 
 export const Hero = () => {

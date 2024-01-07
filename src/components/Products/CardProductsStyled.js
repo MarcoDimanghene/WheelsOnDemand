@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const CarsContainer = styled.div `
@@ -12,7 +13,7 @@ export const CarsContainer = styled.div `
 export const CardsContainer = styled.div`
     display: grid;
     grid-template-columns: ${({gridLength}) => `repeat(${gridLength}, 1fr)`};
-    background-color: black;
+    
     border-radius: 10px;
 `
 export const Card= styled.div`
@@ -22,11 +23,10 @@ export const Card= styled.div`
     flex-direction: column;
     border-radius:15px;
     width:auto;
-    height:200px;
+    height:250px;
     margin:1rem;
-    background-color:#24272B;
-    padding: 0.2rem;
-    box-shadow: 0 0 25px #0ef;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 2px solid #0ef;
 `
 export const CardContImg = styled.div`
     display: flex;
@@ -34,10 +34,10 @@ export const CardContImg = styled.div`
     width: 100%;
 `
 export const CardImg = styled.img `
-    width:100px;
-    height:100px;
+    height:120px;
     object-fit: cover;
     margin: auto;
+    
 `
 export const CardText = styled.div`
     display: flex;
@@ -45,10 +45,10 @@ export const CardText = styled.div`
     width: 70%;
 `
 export const CardTitle = styled.h2`
-    margin: 0;
-    margin-bottom: 5px;
     font-weight: 400;
     letter-spacing: 0.05rem;
+    margin:0;
+    padding:0;
 `
 
 export const InfoCard = styled.p`
@@ -71,5 +71,24 @@ export const ButtonContainerStyled=styled.div `
     align-items: center;
     justify-content: space-between;
     width:70%;
-    
+    margin: 15px;
 `
+export const BtnStyled = styled(motion.button) `
+    width: 60%;
+    height: 30px;
+    background: #081B29;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 600;
+    border: solid 0.5px #000;
+    border-radius: 25px;
+    transition: opacity 0.3s, transform 0.3s;
+    margin: 0 15px 0 0;
+    &:hover {
+    opacity: 0.9; 
+    transform: scale(1.1);
+    background: #000; 
+    }
+`
+
