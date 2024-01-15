@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const CarsContainer = styled.div `
@@ -73,11 +73,12 @@ export const ButtonContainerStyled=styled.div `
     width:70%;
     margin: 15px;
 `
-export const BtnStyled = styled(motion.button) `
+export const BtnStyled = styled(Link) `
     width: 60%;
     height: 30px;
     background: #081B29;
     cursor: pointer;
+    text-align: center;
     font-size: 1.2rem;
     color: #fff;
     font-weight: 600;

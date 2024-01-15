@@ -1,3 +1,4 @@
+import { useDispatch } from 'react-redux';
 import { formatPrice } from '../../utils/index';
 
 import Button from '../UI/Button/Button';
@@ -10,9 +11,11 @@ import {
     CardTitle,
     
 } from './CardsRecommendedStyled';
+import { addToCart } from '../../redux/cart/cartSlice';
 
 // eslint-disable-next-line react/prop-types
-const CardRecomendacion = ({name, price, img1}) => {
+const CardRecomendacion = ({name, price, img1, id}) => {
+    const dispatch = useDispatch()
     return (
     <Card>
         <CardImg
@@ -23,7 +26,7 @@ const CardRecomendacion = ({name, price, img1}) => {
             <CardTitle>{name}</CardTitle>
             
             <CardPrice>{formatPrice(price)}</CardPrice>
-            <Button onClick={e => e.preventDefault()}>
+            <Button onClick={() => dispatch(addToCart({id, name, price, img1}))}>
                 Agregar
             </Button>
         </CardText>

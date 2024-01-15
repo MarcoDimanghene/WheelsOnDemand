@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { FaShoppingCart } from 'react-icons/fa';
 
-import { LinkContainerStyled } from './../NavbarStyles';
 import { toggleHiddenCart } from '../../../redux/cart/cartSlice';
+import { LinkContainerStyled } from '../NavbarStyles';
 
 const CartIcon = () => {
     const totalCartItems = useSelector(state => state.cart.cartItems).reduce(

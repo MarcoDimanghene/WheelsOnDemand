@@ -1,5 +1,6 @@
+import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 export const HeaderContainerStyled = styled.header`
     height:auto;
@@ -139,3 +140,37 @@ export const LblCartQuantity = styled.label `
     top: 39px;
     padding:2px;
 `
+
+export const ModalOverlayStyled = styled(motion.div)`
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    width: calc(100vw - 450px);
+    height: 100vh;
+
+    ${({ isHidden }) =>
+        !isHidden &&
+        css`
+        backdrop-filter: blur(4px);
+    `}
+`;
+export const LinksContainerStyled = styled.div`
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+`;
+
+export const LinkContainerStyled = styled.div`
+  font-size: 1.2rem;
+  color: #fff;
+  padding: 5px;
+  border-radius:15px;
+  &:hover {
+    cursor: pointer;
+    background-color: #000;
+    border-bottom: 2px solid #fff;
+  }
+`;

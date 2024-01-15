@@ -11,14 +11,13 @@ import {
     CardText,
     CardTitle,
 } from './CardProductsStyled';
-import { Link } from 'react-router-dom';
 import { selectProductById } from '../../redux/products/productsSlice';
+import { addToCart } from '../../redux/cart/cartSlice';
 
 // eslint-disable-next-line react/prop-types, no-unused-vars
 const CardProducts = ({ id, name, price, img1, img2, year, km, description, category  }) => {
     const dispatch = useDispatch();
     const viewProduc = () => {
-        console.log(`Clic en la ID: ${id}`);
         dispatch(selectProductById(id));
     }
 
@@ -41,10 +40,10 @@ const CardProducts = ({ id, name, price, img1, img2, year, km, description, cate
         </CardText>
         <ButtonContainerStyled>
 
-            <BtnStyled onClick={e => e.preventDefault()}>Agregar</BtnStyled>
-            <BtnStyled> <Link to={`/product/${id}`} onClick={viewProduc}>
+            <BtnStyled onClick={() => dispatch(addToCart({id, name, img1, price}))}>Agregar</BtnStyled>
+            <BtnStyled to={`/product/${id}`} onClick={viewProduc}> 
                 Ver Más
-            </Link> </BtnStyled>
+            </BtnStyled>
         </ButtonContainerStyled>
     </Card>
 );
