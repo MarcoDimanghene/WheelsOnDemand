@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { ButtonSubmitStyled } from './SubmitStyles';
 
 const Submit = ({ children, onClick, disabled = false }) => {

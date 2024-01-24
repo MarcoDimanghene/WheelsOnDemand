@@ -45,7 +45,7 @@ export const PriceStyled = styled.span`
   font-weight: 700;
   font-size: 24px;
   line-height: 2rem;
-  background: var(--btn-gradient);
+  background: #fff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `;

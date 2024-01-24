@@ -24,7 +24,7 @@ const ProductsCheckout = ({ cartItems, shippingCost, price }) => {
           cartItems.map(item => <CardProductCheckout key={item.id} {...item} />)
         ) : (
           <>
-            <p>No seas amarrete, compra algo</p>
+            <p>Tu carrito esta vacio</p>
             <Link />
           </>
         )}

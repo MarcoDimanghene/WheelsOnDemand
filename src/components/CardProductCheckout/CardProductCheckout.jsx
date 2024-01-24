@@ -39,7 +39,7 @@ const CardProductCheckout = ({ img1, name, desc, price, quantity, id }) => {
         <Count>{quantity}</Count>
         <Increase
           onClick={() =>
-            dispatch(addToCart({ img, title, desc, price, id }))
+            dispatch(addToCart({ img1, name, desc, price, id }))
           }
         >
           <BsPlusLg />

@@ -14,7 +14,7 @@ export const registerValidationSchema = Yup.object({
     .matches(regEmail, 'Mail no valido')
     .required('Campo Requerido'),
   password: Yup.string()
-    .min(6, 'Mínimo de caracteres: 6')
+    .min(8, 'Mínimo de caracteres: 8')
     .required('Campo Requerido'),
 });
 
@@ -23,7 +23,7 @@ export const loginValidationSchema = Yup.object({
     .matches(regEmail, 'Mail no valido')
     .required('Campo Requerido'),
   password: Yup.string()
-    .min(6, 'Mínimo de caracteres: 6')
+    .min(8, 'Mínimo de caracteres: 8')
     .required('Campo Requerido'),
 });
 

@@ -4,7 +4,8 @@ import {  IconRegSpanStyled, LinkloginStyled, RegConteinerStyled, RegFormStyled,
 import { FaLock, FaUser } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FadeVariants } from "../../utils";
-import { ButtonUserStyled } from "../Login/LoginStyled";
+import { Formik } from "formik";
+import Submit from "../../components/UI/Submit/Submit";
 
 const Register = () => {
     
@@ -15,7 +16,8 @@ const Register = () => {
         animate="animate"
         exit="exit"
     >
-        <RegConteinerStyled>
+        <Formik>
+            <RegConteinerStyled>
             <RegInfoContStyled>
                 <RegTitleStyled>
                     Registrate y Accede
@@ -43,12 +45,14 @@ const Register = () => {
                 </LblLoginStyled>
                 <InputStyled />
                 <TxtStyled>Ya tienes cuenta? 
-                <LinkloginStyled to="/login">Login</LinkloginStyled>
+                <LinkloginStyled to="/login">inicia tu sesión</LinkloginStyled>
                 </TxtStyled>
-                <ButtonUserStyled whileTap={{ scale: 0.9 }}>Registrate</ButtonUserStyled>
+                <Submit>Registrate</Submit>
             </RegFormStyled>
                 
         </RegConteinerStyled>
+        </Formik>
+        
     </WrapperRegisterStyled>
     )
 }

@@ -6,15 +6,19 @@ export const ButtonSubmitStyled = styled(motion.button)`
   outline: none;
   border: none;
   border-radius: 10px;
-  background: var(--btn-gradient);
+  background: linear-gradient(#081b29, #0ef, #081b29 );
   color: white;
   text-transform: uppercase;
   font-weight: 400;
   cursor: pointer;
-  margin-top: 15px;
+  margin-top: 5px;
   border: 2px solid #0ef;
   &:disabled {
     cursor: not-allowed;
     opacity: 0.5;
   }
+  &:hover{
+        opacity: 50%;
+        scale: 1.1;
+    }
 `;

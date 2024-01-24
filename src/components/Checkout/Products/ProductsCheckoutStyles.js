@@ -22,12 +22,12 @@ export const CardsWrapperStyled = styled.div`
   overflow: scroll;
 
   &::-webkit-scrollbar {
-    background: transparent;
+    background: white;
     width: 6px;
   }
 
   &::-webkit-scrollbar-thumb {
-    background: var(--gray-bg);
+    background: #242424;
     border-radius: 5px;
   }
 
@@ -64,7 +64,7 @@ export const EnvioStyled = styled(SubtotalStyled)``;
 export const TotalStyled = styled(SubtotalStyled)``;
 
 export const PriceTotalStyled = styled.span`
-  color: #ff7a00;
+  color: #fff;
   font-weight: 800;
   font-size: 1.3rem;
 `;
