@@ -51,7 +51,7 @@ export const RegInfoContStyled = styled.div `
 `
 
 export const IconRegSpanStyled = styled.span`
-    margin-right: 5px;
+    
     color: #fff;
     `
 export const RegTitleStyled = styled.h2`

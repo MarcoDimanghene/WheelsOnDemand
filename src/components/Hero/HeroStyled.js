@@ -19,23 +19,24 @@ const changeBackground = keyframes`
 
 export const HeroContainerStyled= styled.div `
     max-width: 1400px;
+    height: 400px;
     box-shadow: 0 0 25px #0ef;
     padding:0;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     animation: ${changeBackground} 50s  infinite;
+    border-radius:25px;
 `
 export const TitleContainerStyled = styled.h1`
     color: #fff;
     display:flex;
     background-color: rgba(0, 0, 0, 0.7);
     text-align: center;
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    margin: auto;
+    padding:30px;
     width:25%;
+    height:20%;
+    margin:15px;
     border-radius: 25px;
     @media (max-width: 700px) {
         font-size: 1.5rem;
@@ -46,27 +47,16 @@ export const TitleContainerStyled = styled.h1`
 `
 export const InfoContainerStyled = styled.div`
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width:100%;
-    height: 400px;
-    img {
-        border-radius:15%;
-        height: auto;
-    }
+    justify-content: flex-end;
+    width: 100%;
+    height:100%;
 `
-export const ImgContainerStyled = styled.div`
-    width: 30%; 
-    height: auto;
-    overflow: hidden;
-    @media (max-width: 400px) {
-        display:none;
-    }
-`
+
 export const TextContainerStyled = styled.div`
     color:#fff;
     width: 90%;
     height: 60%;
+    
     padding:15px;
     margin: auto;
     text-align: center;

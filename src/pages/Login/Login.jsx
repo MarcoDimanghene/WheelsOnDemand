@@ -1,9 +1,15 @@
 
-import { InputStyled, LblLoginStyled } from "../../components/UI/Input/InputStyled";
+import { Formik } from "formik";
+import LoginInput from "../../components/UI/Input/Input";
+import Submit from "../../components/UI/Submit/Submit";
 import { TxtStyled, InfoTxtStyled, StrongeStyled } from "../../components/UI/Textformat/TxtStyled";
 import { FadeVariants } from "../../utils";
-import {  ButtonUserStyled, IconSpanStyled,  InfotextContStyled,  LinkTxtStyled, LogginConteinerStyled, LoggintFormStyled, TitleStyled,  WrapperLoginStyled} from "./LoginStyled"
+import { IconRegSpanStyled } from "../Register/RegisterStyled";
+import { InfotextContStyled,  LinkTxtStyled, LogginConteinerStyled, LoggintFormStyled, TitleStyled,  WrapperLoginStyled} from "./LoginStyled"
 import { FaLock, FaUser } from "react-icons/fa"; 
+import { loginInitialValues } from "../../formik/initialValues";
+import { loginValidationSchema } from "../../formik/validationSchema";
+import { LblLoginStyled } from "../../components/UI/Input/InputStyled";
 
 InfoTxtStyled
 const Login = () => {
@@ -13,27 +19,26 @@ const Login = () => {
         variants={FadeVariants}
         initial="initial"
         animate="animate"
-        exit="exit"
         >
-            <LogginConteinerStyled>
+            <Formik
+            initialValues={loginInitialValues}
+            validationSchema={loginValidationSchema}
+            onSubmit={(values) => console.log(values)}>
+                <LogginConteinerStyled>
                 <LoggintFormStyled>
                     <h2>Inicio de Sesión</h2>
-                    <LblLoginStyled> <TxtStyled> 
-                        <IconSpanStyled>
-                            <FaUser />
-                        </IconSpanStyled> Usuario</TxtStyled>  
-                    </LblLoginStyled>
-                    <InputStyled />
-                    <LblLoginStyled> <TxtStyled> 
-                        <IconSpanStyled>
-                            <FaLock />
-                        </IconSpanStyled>Contraseña </TxtStyled> 
-                    </LblLoginStyled>
-                    <InputStyled type="password"/>
+                    <LblLoginStyled> 
+                        <IconRegSpanStyled> <FaUser /></IconRegSpanStyled>
+                        <LoginInput name= "name" type='text' placeholder="Nombre"/>
+                </LblLoginStyled>
+                <LblLoginStyled>
+                    <IconRegSpanStyled> <FaLock /></IconRegSpanStyled>
+                    <LoginInput name= "password" type='password' placeholder="Contraseña"/>
+                </LblLoginStyled>
                     <TxtStyled>Tienes cuentas?  
                         <LinkTxtStyled to='register'>Registrate</LinkTxtStyled>
                     </TxtStyled>
-                    <ButtonUserStyled whileTap={{ scale: 0.95 }}>Ingresar</ButtonUserStyled>
+                    <Submit>Ingresar</Submit>
                 </LoggintFormStyled>
                 
                 <InfotextContStyled>
@@ -43,7 +48,7 @@ const Login = () => {
                 </InfotextContStyled>
                 
             </LogginConteinerStyled>
-            
+            </Formik>            
         </WrapperLoginStyled>
     )
 }

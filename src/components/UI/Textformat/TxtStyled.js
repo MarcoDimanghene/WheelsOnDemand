@@ -5,7 +5,8 @@ export const TxtStyled = styled.h2`
     color: #fff;
     font-weight: normal;
     text-align: center;
-    
+    margin:10px 0 0 0;
+    padding: 0;
     `
 
 export const InfoTxtStyled = styled.p `

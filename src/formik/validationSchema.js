@@ -27,8 +27,4 @@ export const loginValidationSchema = Yup.object({
     .required('Campo Requerido'),
 });
 
-export const forgotPasswordValidationSchema = Yup.object({
-  email: Yup.string()
-    .matches(regEmail, 'Mail no valido')
-    .required('Campo Requerido'),
-});
+

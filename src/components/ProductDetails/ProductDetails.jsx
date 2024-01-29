@@ -22,7 +22,7 @@ const ProductDetails = () => {
       variants={FadeVariants}
       initial="initial"
       animate="animate"
-      exit="exit"
+      
     >
       <TitleStyled key={id}>
         {name}

@@ -7,7 +7,7 @@ import {
   InputStyled,
 } from './InputStyled';
 
-const Input = ({ children, name, htmlFor, type, id, placeholder }) => {
+const LoginInput = ({ children, name, htmlFor, type, id, placeholder }) => {
   return (
     <Field name={name}>
       {({ field, form: { errors, touched } }) => (
@@ -29,4 +29,4 @@ const Input = ({ children, name, htmlFor, type, id, placeholder }) => {
   );
 };
 
-export default Input;
+export default LoginInput;

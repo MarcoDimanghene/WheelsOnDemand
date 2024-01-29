@@ -1,26 +1,26 @@
 import styled from "styled-components";
 
-export const LblLoginStyled = styled.label `
+export const LblLoginStyled = styled.div `
     font-size: 1rem;
     position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px;
     `
 
 export const InputBoxStyled = styled.div`
   display: flex;
-  margin: 1rem 0;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 50%;
+
 `;
 
 export const InputLabelStyled = styled.label`
   display: flex;
-  margin: 1rem 0;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 50%;
 `;
 
 export const InputStyled = styled.input`
@@ -44,7 +44,7 @@ export const InputStyled = styled.input`
 
 export const ErrorMessageStyled = styled.p`
   margin: 0;
-  margin-top: 5px;
+  
   color: #fb103d;
   font-size: 14px;
 `;

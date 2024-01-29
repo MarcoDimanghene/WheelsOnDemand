@@ -16,6 +16,3 @@ export const loginInitialValues = {
   password: "",
 };
 
-export const forgotPasswordInitialValues = {
-  email: "",
-};
