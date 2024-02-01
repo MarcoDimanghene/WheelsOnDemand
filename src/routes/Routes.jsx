@@ -6,6 +6,7 @@ import Checkout from '../pages/Checkout/Checkout';
 import Cars from '../pages/Products/Products';
 import { AnimatePresence } from 'framer-motion';
 import ProductDetails from '../components/ProductDetails/ProductDetails';
+import PageNotFound from '../pages/PageNotFound/PageNotFound';
 
 
 
@@ -22,7 +23,7 @@ const Routes = () => {
             </Route>
             <Route path='login' element={<Login/>}/>
             <Route path='products' element={<Cars/>} />
-            <Route path='*' element={<p> ERROR 404</p>}/>
+            <Route path='*' element={<PageNotFound/>} />
             <Route path="/product/:id" element={<ProductDetails/>} />
             <Route
         path='/checkout'
@@ -30,7 +31,7 @@ const Routes = () => {
             <Checkout />
         
         }
-      />
+        />
         </ReactDomRoutes>
         </AnimatePresence>
     )
