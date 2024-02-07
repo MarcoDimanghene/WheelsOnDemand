@@ -1,4 +1,4 @@
-import { HeaderContainerStyled,  IconStyled,  LogoStyled, MenuContainerStyled, NavbarContainerStyled, ResMenuConteinerStyled, NavLinkStyled} from "./NavbarStyles"
+import { HeaderContainerStyled,  IconStyled,  LogoStyled, MenuContainerStyled, NavbarContainerStyled, ResMenuConteinerStyled, NavLinkStyled, ConteinerMenuLinks} from "./NavbarStyles"
 import LogoCar from "../Img/logoCar.png"
 import {motion} from "framer-motion"
 import {BiSolidHome} from "react-icons/bi"
@@ -24,23 +24,24 @@ function Navbar() {
             <NavbarContainerStyled>
                 <LogoStyled> <img src={LogoCar} alt="logo" />
                 </LogoStyled>
-                    
-                    <motion.div whileTap={{scale: 0.95}}>
-                        <NavLinkStyled to='/'> <IconStyled> <BiSolidHome /> </IconStyled>Inicio</NavLinkStyled>
-                    </motion.div>
-                    <motion.div whileTap={{scale: 0.95}}>
-                        <NavLinkStyled to='products'> <IconStyled> <AiTwotoneCar/> </IconStyled>Vehiculos</NavLinkStyled>
-                    </motion.div>
-                    <motion.div whileTap={{scale: 0.95}}>
-                        <NavLinkStyled to='info'> <IconStyled> <BsFillInfoSquareFill/> </IconStyled> Informacion</NavLinkStyled>
-                    </motion.div>
+                    <ConteinerMenuLinks>
+                        <motion.div whileTap={{scale: 0.95}}>
+                            <NavLinkStyled to='/'> <IconStyled> <BiSolidHome /> </IconStyled>Inicio</NavLinkStyled>
+                        </motion.div>
+                        <motion.div whileTap={{scale: 0.95}}>
+                            <NavLinkStyled to='products'> <IconStyled> <AiTwotoneCar/> </IconStyled>Vehiculos</NavLinkStyled>
+                        </motion.div>
+                        <motion.div whileTap={{scale: 0.95}}>
+                            <NavLinkStyled to='info'> <IconStyled> <BsFillInfoSquareFill/> </IconStyled> Informacion</NavLinkStyled>
+                        </motion.div>
+                    </ConteinerMenuLinks>
+
                 
                 <ModalCart/>
                 
                     
                 
                 <ResMenuConteinerStyled>
-                    
                     <motion.div whileTap={{scale: 0.98}}> 
                         <NavLinkStyled to='login'> <IconStyled> <BiSolidUser/> </IconStyled>Login</NavLinkStyled>
                     </motion.div>

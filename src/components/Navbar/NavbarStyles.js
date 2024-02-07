@@ -8,6 +8,15 @@ export const HeaderContainerStyled = styled.header`
     width:100%;
 `;
 
+export const ConteinerMenuLinks =styled.div `
+    display: flex;
+
+    @media (max-width: 780px) {
+        display: none;
+    }
+`
+
+
 export const NavbarContainerStyled=styled.div `
     height:80px;
     display: flex;
@@ -164,13 +173,13 @@ export const LinksContainerStyled = styled.div`
 `;
 
 export const LinkContainerStyled = styled.div`
-  font-size: 1.2rem;
-  color: #fff;
-  padding: 5px;
-  border-radius:15px;
-  &:hover {
-    cursor: pointer;
-    background-color: #000;
-    border-bottom: 2px solid #fff;
-  }
+    font-size: 1.2rem;
+    color: #fff;
+    padding: 5px;
+    border-radius:15px;
+    &:hover {
+        cursor: pointer;
+        background-color: #000;
+        border-bottom: 2px solid #fff;
+    }
 `;
