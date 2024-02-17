@@ -7,6 +7,7 @@ import Cars from '../pages/Products/Products';
 import { AnimatePresence } from 'framer-motion';
 import ProductDetails from '../components/ProductDetails/ProductDetails';
 import PageNotFound from '../pages/PageNotFound/PageNotFound';
+import Info from '../pages/Info/Info';
 
 
 
@@ -23,6 +24,7 @@ const Routes = () => {
             </Route>
             <Route path='login' element={<Login/>}/>
             <Route path='products' element={<Cars/>} />
+            <Route path='info' element={<Info/>} />
             <Route path='*' element={<PageNotFound/>} />
             <Route path="/product/:id" element={<ProductDetails/>} />
             <Route

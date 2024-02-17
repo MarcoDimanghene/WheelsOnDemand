@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux"
 import CardProducts from "./CardProducts"
-import {  ButtonContainerStyled, CardsContainer } from "./CardProductsStyled"
-import Button from "../UI/Button/Button";
+import { CardsContainer } from "./CardProductsStyled"
+
 
 
 const CardsProducts = () => {
@@ -17,10 +17,6 @@ const CardsProducts = () => {
                 ))}
             
             </CardsContainer>
-            <ButtonContainerStyled>
-                <Button>Ver Menos</Button>
-                <Button>Ver Mas</Button>
-            </ButtonContainerStyled>
             
         </>
     );

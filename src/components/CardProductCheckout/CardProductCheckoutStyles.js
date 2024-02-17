@@ -5,10 +5,7 @@ export const CardContainerStyled = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 15px;
-
   width: 85%;
-
-  background: var(--gray-bg);
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.3);
   padding: 1rem;
   border-radius: 15px;

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { Form as FormikForm } from 'formik'
 
 export const WrapperLoginStyled = styled(motion.div) `
     display: flex;
@@ -23,7 +24,7 @@ export const LogginConteinerStyled = styled.div `
     overflow:hidden;
     box-shadow: 0 0 25px #0ef;
 `
-export const LoggintFormStyled = styled.form `
+export const LoggintFormStyled = styled(FormikForm) `
     width:50%;
     height:100%;
     background: transparent;

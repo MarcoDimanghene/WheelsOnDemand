@@ -11,6 +11,8 @@ import { loginInitialValues } from "../../formik/initialValues";
 import { loginValidationSchema } from "../../formik/validationSchema";
 import { LblLoginStyled } from "../../components/UI/Input/InputStyled";
 
+
+
 InfoTxtStyled
 const Login = () => {
 
@@ -20,21 +22,22 @@ const Login = () => {
         initial="initial"
         animate="animate"
         >
-            <Formik
+            <Formik 
             initialValues={loginInitialValues}
             validationSchema={loginValidationSchema}
-            onSubmit={(values) => console.log(values)}>
+            onSubmit={(values) => console.log(values)}
+        >
                 <LogginConteinerStyled>
                 <LoggintFormStyled>
                     <h2>Inicio de Sesión</h2>
                     <LblLoginStyled> 
                         <IconRegSpanStyled> <FaUser /></IconRegSpanStyled>
                         <LoginInput name= "name" type='text' placeholder="Nombre"/>
-                </LblLoginStyled>
-                <LblLoginStyled>
-                    <IconRegSpanStyled> <FaLock /></IconRegSpanStyled>
-                    <LoginInput name= "password" type='password' placeholder="Contraseña"/>
-                </LblLoginStyled>
+                    </LblLoginStyled>
+                    <LblLoginStyled>
+                        <IconRegSpanStyled> <FaLock /></IconRegSpanStyled>
+                        <LoginInput name= "password" type='password' placeholder="Contraseña"/>
+                    </LblLoginStyled>
                     <TxtStyled>Tienes cuentas?  
                         <LinkTxtStyled to='register'>Registrate</LinkTxtStyled>
                     </TxtStyled>
