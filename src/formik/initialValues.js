@@ -16,3 +16,8 @@ export const loginInitialValues = {
   password: "",
 };
 
+export const contacInitialValues = {
+  name: "",
+  email: "",
+};
+

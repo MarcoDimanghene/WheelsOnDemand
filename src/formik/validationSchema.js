@@ -25,5 +25,11 @@ export const loginValidationSchema = Yup.object({
     .required('Campo Requerido'),
 });
 
+export const contacValidationSchema = Yup.object({
+  name: Yup.string().required('Campo Requerido'),
+  email: Yup.string()
+    .matches(regEmail, 'Mail no valido')
+    .required('Campo Requerido'),
+});
 
 

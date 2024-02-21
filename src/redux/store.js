@@ -5,6 +5,7 @@ import { persistReducer, persistStore } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import producsReducer from "./products/productsSlice";
 import cartReducer from "./cart/cartSlice";
+import modalnavReducer from "./navmodal/modalnavlink";
 
 
 
@@ -14,6 +15,7 @@ const reducers = combineReducers ({
     products: producsReducer,
     categories: categoriesReducers,
     cart: cartReducer,
+    modalnav: modalnavReducer,
 });
 
 const persistConfig = {
