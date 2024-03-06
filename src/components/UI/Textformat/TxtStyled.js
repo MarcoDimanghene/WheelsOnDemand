@@ -15,6 +15,9 @@ export const InfoTxtStyled = styled.p `
     font-weight: 150;
     text-align: right;
     padding: 0 40px 60px 50px;
+    @media (max-width: 600px) {
+        text-align: center;
+    }
 `
 export const StrongeStyled = styled.strong`
     font-weight: 650;

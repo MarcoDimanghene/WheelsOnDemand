@@ -12,8 +12,7 @@ export const CarsContainer = styled.div `
 
 export const CardsContainer = styled.div`
     display: grid;
-    grid-template-columns: ${({gridLength}) => `repeat(${gridLength}, 1fr)`};
-    
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
     border-radius: 10px;
 `
 export const Card= styled.div`
@@ -32,6 +31,7 @@ export const CardContImg = styled.div`
     display: flex;
     align-items: center;
     width: 100%;
+    overflow: hidden;
 `
 export const CardImg = styled.img `
     height:120px;

@@ -23,7 +23,7 @@ const Register = () => {
             validationSchema={registerValidationSchema}
             onSubmit={(values) => console.log(values)}
         >
-            <RegConteinerStyled>
+        <RegConteinerStyled>
             <RegInfoContStyled>
                 <RegTitleStyled>
                     Registrate y Accede

@@ -22,6 +22,17 @@ export const RegConteinerStyled = styled.div `
     border-radius: 15px;
     overflow:hidden;
     box-shadow: 0 0 25px #0ef;
+    @media (max-width: 770px) {
+        width:90%;
+        height:90%;
+    }
+    @media (max-width: 600px) {
+        display: flex;
+        align-items:center;
+        justify-content:center;
+        flex-direction:column;
+        
+    }
 `
 export const RegFormStyled = styled(FormikForm) `
     width:50%;
@@ -31,6 +42,12 @@ export const RegFormStyled = styled(FormikForm) `
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    @media (max-width: 600px) {
+        border-bottom: 3px solid #081b29;
+        width:100%;
+        height:60%;
+        padding-bottom:10px;
+    }
 `
 export const LinkloginStyled = styled(Link) `
     font-size:1rem;
@@ -49,6 +66,13 @@ export const RegInfoContStyled = styled.div `
     flex-direction: column;
     background: linear-gradient(45deg, #081b29, #0ef);
     border-left: 3px solid #081b29;
+    @media (max-width: 600px) {
+        padding-top: 10px;
+        border-bottom: 3px solid #081b29;
+        width:100%;
+        height:40%;
+        
+    }
 `
 
 export const IconRegSpanStyled = styled.span`

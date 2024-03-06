@@ -10,6 +10,9 @@ export const WrapperLoginStyled = styled(motion.div) `
     width: 100%;
     height: 80vh;
     background: #081b29;
+    @media (max-width: 600px) {
+        height:100%
+    }
     
 `
 export const LogginConteinerStyled = styled.div `
@@ -23,6 +26,18 @@ export const LogginConteinerStyled = styled.div `
     border-radius: 15px;
     overflow:hidden;
     box-shadow: 0 0 25px #0ef;
+
+    @media (max-width: 770px) {
+        width:90%;
+        height:90%;
+    }
+    @media (max-width: 600px) {
+        display: flex;
+        align-items:center;
+        justify-content:center;
+        flex-direction:column-reverse;
+        
+    }
 `
 export const LoggintFormStyled = styled(FormikForm) `
     width:50%;
@@ -33,6 +48,12 @@ export const LoggintFormStyled = styled(FormikForm) `
     justify-content: center;
     flex-direction: column;
     border-radius: 15px;
+    @media (max-width: 600px) {
+
+        width:100%;
+        height:50%;
+        padding: 5px;
+    }
 `
 
 export const LinkTxtStyled = styled(Link) `
@@ -42,6 +63,12 @@ export const LinkTxtStyled = styled(Link) `
     cursor: pointer;
     margin-left: 1em;
     margin-bottom: 15px;
+    @media (max-width: 600px) {
+        font-size:0.8rem;
+        font-weight: 300;
+        margin-left: 0.5rem;
+        margin-bottom: 5px;
+    }
     `
 export const IconSpanStyled = styled.span`
     margin-right: 5px;
@@ -57,11 +84,20 @@ export const InfotextContStyled = styled.div `
     flex-direction: column;
     background: linear-gradient(45deg, #081b29, #0ef);
     border-left: 3px solid #081b29;
+    @media (max-width: 600px) {
+        border-bottom: 3px solid #081b29;
+        width:100%;
+        height:20%;
+    }
 `
 
 export const TitleStyled = styled.h2`
     text-align: right;
     padding: 0 40px 0 50px;
+    @media (max-width: 600px) {
+        text-align: center;
+        padding: 20px;
+    }
 `
 export const ButtonUserStyled = styled(motion.button) `
     position: relative;
