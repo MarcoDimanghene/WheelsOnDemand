@@ -1,12 +1,13 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { AnimatePresence } from 'framer-motion';
-import { ModalContainerStyled } from './ModalNavStyled';
+import { IconModalStyled, MenuModalOverlayStyled, ModalContainerStyled, ModalLinkStyled } from './ModalNavStyled';
 import { useEffect } from 'react';
 import { toggleMenuHidden } from '../../../redux/navmodal/modalnavlink';
-import { IconStyled, NavLinkStyled } from '../NavbarStyles';
 import {BiSolidHome} from "react-icons/bi"
 import {AiTwotoneCar} from "react-icons/ai"
 import { BsFillInfoSquareFill } from 'react-icons/bs';
+import { GiExitDoor } from "react-icons/gi";
+
 
 const ModalUser = () => {
     const { hidden } = useSelector(state => state.modalnav);
@@ -19,6 +20,12 @@ const ModalUser = () => {
     }, [dispatch]);
 
     return (
+        <>
+        {!hidden && (
+            <MenuModalOverlayStyled onClick={()=>dispatch(toggleMenuHidden())}
+            isHidden={hidden}
+            />
+        )}
         <AnimatePresence>
             {!hidden && (
                 <ModalContainerStyled
@@ -29,19 +36,30 @@ const ModalUser = () => {
                     key='cart-user'
                     
                 >
-                    <NavLinkStyled to='/'> <IconStyled> <BiSolidHome /> </IconStyled>Inicio</NavLinkStyled>
-                    <NavLinkStyled to='products'> <IconStyled> <AiTwotoneCar/> </IconStyled>Vehiculos</NavLinkStyled>
-                    <NavLinkStyled to='info'> <IconStyled> <BsFillInfoSquareFill/> </IconStyled> Informacion</NavLinkStyled>   
-                    <span
-                        onClick={() => {
-                            dispatch(toggleMenuHidden());
-                        }}
-                    >
+
+                    <ModalLinkStyled  to='/' onClick={() => {dispatch(toggleMenuHidden());}}> 
+                            <IconModalStyled whileTap={{scale: 0.95}}> <BiSolidHome />  </IconModalStyled>
+                            Inicio
+                    </ModalLinkStyled>
+                    <ModalLinkStyled to='products' onClick={() => {dispatch(toggleMenuHidden());}}>
+                        <IconModalStyled whileTap={{scale: 0.95}}> <AiTwotoneCar/> </IconModalStyled>
+                        Vehiculos
+                    </ModalLinkStyled>
+                    <ModalLinkStyled to='info' onClick={() => {dispatch(toggleMenuHidden());}}>
+                        <IconModalStyled whileTap={{scale: 0.95}}> <BsFillInfoSquareFill/> </IconModalStyled> 
+                        Info y Contacto 
+                    </ModalLinkStyled>
+                    <ModalLinkStyled onClick={() => {dispatch(toggleMenuHidden());}}>
+                        <IconModalStyled whileTap={{scale: 0.95}} >
+                        <GiExitDoor />
+                        </IconModalStyled>
                         Salir
-                    </span>
+                    </ModalLinkStyled>
+                    
                 </ModalContainerStyled>
             )}
         </AnimatePresence>
+        </>
     );
 };
 

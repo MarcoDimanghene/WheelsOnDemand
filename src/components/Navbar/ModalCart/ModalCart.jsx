@@ -63,7 +63,7 @@ const ModalCart = () => {
                     <h1>Tus Productos</h1>
                 <Increase
                     onClick={() => dispatch(clearCart())}
-                    bgColor='var(--magenta)'
+                    
                     disabled={!cartItems.length}>
                     <IoMdTrash/>
                 </Increase>

@@ -31,18 +31,22 @@ export const HeroContainerStyled= styled.div `
 export const TitleContainerStyled = styled.h1`
     color: #fff;
     display:flex;
+    align-items: center;
     background-color: rgba(0, 0, 0, 0.7);
     text-align: center;
     padding:30px;
-    width:25%;
-    height:20%;
+    width:30%;
+    height:35%;
     margin:15px;
     border-radius: 25px;
-    @media (max-width: 700px) {
-        font-size: 1.5rem;
+    @media (max-width: 800px) {
+        width:35%;
+        height:35%;
     }
-    @media (max-width: 400px) {
-        font-size: 1.2rem;
+    @media (max-width: 450px) {
+
+        width:100%;
+        
     }
 `
 export const InfoContainerStyled = styled.div`

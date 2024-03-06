@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import styled from "styled-components"
 import { Form as FormikForm } from 'formik'
 
+
 export const WrapperRegisterStyled = styled(motion.div) `
     display: flex;
     align-items:center;

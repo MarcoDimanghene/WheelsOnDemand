@@ -172,7 +172,9 @@ export const LinksContainerStyled = styled.div`
     gap: 40px;
 `;
 
+
 export const LinkContainerStyled = styled.div`
+    display:flex;
     font-size: 1.2rem;
     color: #fff;
     padding: 5px;
@@ -182,4 +184,5 @@ export const LinkContainerStyled = styled.div`
         background-color: #000;
         border-bottom: 2px solid #fff;
     }
+    
 `;

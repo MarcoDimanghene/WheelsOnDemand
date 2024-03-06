@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { FaShoppingCart } from 'react-icons/fa';
 
 import { toggleHiddenCart } from '../../../redux/cart/cartSlice';
-import { LinkContainerStyled } from '../NavbarStyles';
+import { LinkContainerStyled, SpamStyled } from '../NavbarStyles';
 
 const CartIcon = () => {
     const totalCartItems = useSelector(state => state.cart.cartItems).reduce(
@@ -19,7 +19,7 @@ const CartIcon = () => {
         onClick={() => dispatch(toggleHiddenCart())}
     >
         <FaShoppingCart />
-        <span>{totalCartItems}</span>
+        <SpamStyled>{totalCartItems}</SpamStyled>
         </LinkContainerStyled>
     );
 };

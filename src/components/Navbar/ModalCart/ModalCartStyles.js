@@ -10,14 +10,16 @@ export const ContainerStyled = styled(motion.div)`
     flex-direction: column;
     justify-content: space-between;
     gap: 10px;
-
     width: 450px;
-    height: calc(100vh - 4rem);
-
+    height: calc(100vh-4rem);
     padding: 2rem;
     background-color: rgba(0, 0, 0, 1);
     border-radius: 0 0 0 1rem;
     box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.3);
+    @media (max-width: 500px) {
+        width:300px;
+        
+        }
 `;
 
 export const CloseButtonContainerStyled = styled.div`
@@ -51,7 +53,8 @@ export const TitleStyled = styled.div`
 `;
 
 export const MainContainerStyled = styled.div`
-    height: 55%;
+    height: 80%;
+    
 `;
 
 export const ProductsWrapperStyled = styled.div`
@@ -59,14 +62,11 @@ export const ProductsWrapperStyled = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 10px;
-
     width: 100%;
     height: 400px;
     margin: 0 auto;
     padding: 1rem;
-
     padding-left: 0;
-
     overflow: scroll;
 
     &::-webkit-scrollbar {
@@ -101,6 +101,14 @@ export const ProductContainerStyled = styled.div`
         border-radius: 16px;
         object-fit: cover;
     }
+    @media (max-width: 500px) {
+        width:auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        
+        }
 `;
 
 export const TextContainerStyled = styled.div`
