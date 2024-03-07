@@ -5,7 +5,12 @@ import styled, { css } from "styled-components"
 export const HeaderContainerStyled = styled.header`
     height:auto;
     background: #081b29;
-    width:100%;
+    width:80%;
+    margin:auto;
+    @media (max-width: 990px) {
+        width:100%;
+        
+        }
 `;
 
 export const ConteinerMenuLinks =styled.div `
@@ -31,6 +36,7 @@ export const NavbarContainerStyled=styled.div `
 export const LogoStyled = styled.div `
     margin-left:5%;
     width:30%;
+    min-width: 100px;
     @media (max-width: 908px) {
         width:30%;
         margin: 5%;

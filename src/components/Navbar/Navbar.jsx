@@ -1,6 +1,6 @@
 import { HeaderContainerStyled,  IconStyled,  LogoStyled, MenuContainerStyled, 
     NavbarContainerStyled, ResMenuConteinerStyled, NavLinkStyled, ConteinerMenuLinks} from "./NavbarStyles"
-import LogoCar from "../Img/logoCar.png"
+import LogoCar from "../Img/logo2.png"
 import {motion} from "framer-motion"
 import { useDispatch } from 'react-redux';
 import {BiSolidHome} from "react-icons/bi"

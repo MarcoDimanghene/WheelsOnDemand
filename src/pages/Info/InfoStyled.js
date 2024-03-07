@@ -6,6 +6,7 @@ export const WrapperInfoStyled = styled.div `
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin:auto;
     max-width: 1400px;
     flex-wrap: wrap;
     width: 100%;
