@@ -15,7 +15,9 @@ export const HeaderContainerStyled = styled.header`
 
 export const ConteinerMenuLinks =styled.div `
     display: flex;
-
+    align-items:center;
+    justify-content:center;
+    width: 100%;
     @media (max-width: 780px) {
         display: none;
     }

@@ -30,7 +30,7 @@ function Navbar() {
                             <NavLinkStyled to='products'> <IconStyled> <AiTwotoneCar/> </IconStyled>Vehiculos</NavLinkStyled>
                         </motion.div>
                         <motion.div whileTap={{scale: 0.95}}>
-                            <NavLinkStyled to='info'> <IconStyled> <BsFillInfoSquareFill/> </IconStyled> Informacion</NavLinkStyled>
+                            <NavLinkStyled to='info'> <IconStyled> <BsFillInfoSquareFill/> </IconStyled> Informacion y Contacto</NavLinkStyled>
                         </motion.div>
                     </ConteinerMenuLinks>
                 <ModalCart/>

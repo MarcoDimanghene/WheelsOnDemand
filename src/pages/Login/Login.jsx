@@ -1,4 +1,3 @@
-
 import { Formik } from "formik";
 import LoginInput from "../../components/UI/Input/Input";
 import Submit from "../../components/UI/Submit/Submit";
@@ -10,7 +9,7 @@ import { FaLock, FaUser } from "react-icons/fa";
 import { loginInitialValues } from "../../formik/initialValues";
 import { loginValidationSchema } from "../../formik/validationSchema";
 import { LblLoginStyled } from "../../components/UI/Input/InputStyled";
-
+import { MdEmail } from "react-icons/md";
 
 
 InfoTxtStyled
@@ -27,7 +26,7 @@ const Login = () => {
             validationSchema={loginValidationSchema}
             onSubmit={(values) => console.log(values)}
         >
-                <LogginConteinerStyled>
+            <LogginConteinerStyled>
                 <LoggintFormStyled>
                     <h2>Inicio de Sesión</h2>
                     <LblLoginStyled> 
@@ -38,7 +37,7 @@ const Login = () => {
                         <IconRegSpanStyled> <FaLock /></IconRegSpanStyled>
                         <LoginInput name= "password" type='password' placeholder="Contraseña"/>
                     </LblLoginStyled>
-                    <TxtStyled>Tienes cuentas?  
+                    <TxtStyled>No tienes cuentas?  
                         <LinkTxtStyled to='register'>Registrate</LinkTxtStyled>
                     </TxtStyled>
                     <Submit>Ingresar</Submit>

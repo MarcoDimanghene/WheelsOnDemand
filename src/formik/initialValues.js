@@ -12,7 +12,7 @@ export const registerInitialValues = {
 };
 
 export const loginInitialValues = {
-  email: "",
+  name: "",
   password: "",
 };
 

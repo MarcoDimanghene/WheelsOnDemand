@@ -20,6 +20,9 @@ export const registerValidationSchema = Yup.object({
 
 export const loginValidationSchema = Yup.object({
   name: Yup.string().required('Campo Requerido'),
+  email: Yup.string()
+    .matches(regEmail, 'Mail no valido')
+    .required('Campo Requerido'),
   password: Yup.string()
     .min(8, 'Mínimo de caracteres: 8')
     .required('Campo Requerido'),
