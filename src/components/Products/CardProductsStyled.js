@@ -21,11 +21,12 @@ export const Card= styled.div`
     justify-content: center;
     flex-direction: column;
     border-radius:15px;
-    width:auto;
     height:250px;
     margin:1rem;
     background-color: rgba(0, 0, 0, 0.4);
     border: 2px solid #0ef;
+    width:80%;
+    
 `
 export const CardContImg = styled.div`
     display: flex;
@@ -70,11 +71,15 @@ export const ButtonContainerStyled=styled.div `
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width:70%;
+    width:100%;
     margin: 15px;
+    @media (max-width: 768px) {
+        margin: 0;
+        width:90%;
+    }
 `
 export const BtnStyled = styled(Link) `
-    width: 60%;
+    width: 80%;
     height: 30px;
     background: #081B29;
     cursor: pointer;
@@ -91,5 +96,6 @@ export const BtnStyled = styled(Link) `
     transform: scale(1.1);
     background: #000; 
     }
+
 `
 

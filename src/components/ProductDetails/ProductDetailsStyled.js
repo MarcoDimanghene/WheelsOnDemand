@@ -7,7 +7,7 @@ export const ProducContStyled = styled.div `
     justify-content: center;
     flex-direction: column;
     max-width: 1400px;
-    width:50%;
+    width:80%;
     height:100%;
     margin: auto;
     background-color: rgba(0, 0, 0, 0.5);
@@ -15,6 +15,7 @@ export const ProducContStyled = styled.div `
     border-radius: 25px;
     box-shadow: 0 0 25px #0ef;
     border: 2px solid #0ef;
+
 `
 export const TitleStyled = styled.h2 `
     color:#fff;
@@ -34,6 +35,7 @@ export const ImgStyled = styled.img `
     max-width: 300px;
     border-radius: 20px;
     padding: 15px;
+
 `
 export const ImgContStyled= styled.div `
     display: flex;

@@ -5,6 +5,8 @@ export const ContainerCheckoutStyled = styled.div`
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 2rem 5rem;
+    max-width: 1400px;
+    margin:auto;
     @media (max-width: 768px) {
         display: flex;
         flex-direction: column;
