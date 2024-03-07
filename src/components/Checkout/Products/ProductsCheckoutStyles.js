@@ -2,6 +2,11 @@ import styled from 'styled-components';
 
 export const ProductosContainerStyled = styled.div`
   width: 40%;
+  @media (max-width: 768px) {
+        width:80%;
+    }
+  
+
 `;
 
 export const ProductsTitleStyled = styled.h2`
@@ -14,7 +19,6 @@ export const CardsWrapperStyled = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 25px;
-
   width: 80%;
   height: 440px;
   margin: 0 auto;
@@ -34,10 +38,11 @@ export const CardsWrapperStyled = styled.div`
   &::-webkit-scrollbar:horizontal {
     display: none;
   }
-
   @media (max-height: 800px) {
     height: 270px;
   }
+  
+  
 
   @media (max-width: 1500px) {
     width: 100%;

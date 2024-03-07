@@ -16,6 +16,12 @@ export const CardContainerStyled = styled.div`
     border-radius: 16px;
     object-fit: cover;
   }
+      @media (max-width: 500px) {
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 export const CardInfoStyled = styled.div`
