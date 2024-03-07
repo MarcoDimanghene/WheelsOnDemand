@@ -41,9 +41,6 @@ export const CardsWrapperStyled = styled.div`
   @media (max-height: 800px) {
     height: 270px;
   }
-  
-  
-
   @media (max-width: 1500px) {
     width: 100%;
   }

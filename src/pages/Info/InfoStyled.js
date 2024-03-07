@@ -18,6 +18,9 @@ export const InfoContStyled = styled.div `
     margin: auto;
     padding: 1rem;
     text-align: center;
+    @media (max-width: 600px) {
+        width:80%;
+    }
 `
 export const ContacFormStyled = styled(FormikForm) `
     height: 400px;
@@ -34,6 +37,9 @@ export const ContacFormStyled = styled(FormikForm) `
     padding: 15px;
     margin-top: 25px;
     margin-bottom: 25px;
+    @media (max-width: 600px) {
+        width:80%;
+    }
 `
 export const TxtContacStyled = styled.textarea `
     width:80%;
