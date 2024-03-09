@@ -64,7 +64,7 @@ export const CatStyled = styled.span `
     width:85%;
 `
 export const BtnDetailsStyled= styled(motion.button) `
-    width: 20%;
+    width: 40%;
     height: 30px;
     background: #000;
     cursor: pointer;
