@@ -14,6 +14,8 @@ export const CardsContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
     border-radius: 10px;
+    width:100%;
+    
 `
 export const Card= styled.div`
     display: flex;
@@ -25,7 +27,7 @@ export const Card= styled.div`
     margin:1rem;
     background-color: rgba(0, 0, 0, 0.4);
     border: 2px solid #0ef;
-    width:80%;
+    width:90%;
     
 `
 export const CardContImg = styled.div`
