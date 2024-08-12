@@ -4,17 +4,33 @@ import Submit from "../../components/UI/Submit/Submit";
 import { TxtStyled, InfoTxtStyled, StrongeStyled } from "../../components/UI/Textformat/TxtStyled";
 import { FadeVariants } from "../../utils";
 import { IconRegSpanStyled } from "../Register/RegisterStyled";
-import { InfotextContStyled,  LinkTxtStyled, LogginConteinerStyled, LoggintFormStyled, TitleStyled,  WrapperLoginStyled} from "./LoginStyled"
+import { EyesBtnStyled, InfotextContStyled,  LinkTxtStyled, LogginConteinerStyled, LoggintFormStyled, TitleStyled,  WrapperLoginStyled} from "./LoginStyled"
 import { FaLock, FaUser } from "react-icons/fa"; 
 import { loginInitialValues } from "../../formik/initialValues";
 import { loginValidationSchema } from "../../formik/validationSchema";
 import { LblLoginStyled } from "../../components/UI/Input/InputStyled";
-import { MdEmail } from "react-icons/md";
+import { loginUser } from "../../axios/axios-user";
+import {useDispatch} from "react-redux";
+import { setCurrentUser } from "../../redux/user/userSlice";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import useRedirect from "../../Hooks/UseRedirect";
+import { InputSpan, PassContStyled } from "../../components/ChangePass/ChangePassStyled";
+import { useState } from "react";
+
 
 
 InfoTxtStyled
 const Login = () => {
+    useRedirect("/")
+    const dispatch = useDispatch()
+    const [showPassword, setShowPassword] = useState(false);
+    
 
+    const toggleShowPassword = () => {
+        setShowPassword(!showPassword);
+    };
+
+    
     return (
         <WrapperLoginStyled
         variants={FadeVariants}
@@ -24,23 +40,46 @@ const Login = () => {
             <Formik 
             initialValues={loginInitialValues}
             validationSchema={loginValidationSchema}
-            onSubmit={(values) => console.log(values)}
+            onSubmit={async(values) => {
+                
+
+                const user = await loginUser(
+                    values.email,
+                    values.password);
+
+                    if(user) {
+                        dispatch(setCurrentUser({
+                            ...user.usuario,
+                            token: user.token
+                        }))
+                        
+                    }
+            }}
         >
             <LogginConteinerStyled>
                 <LoggintFormStyled>
                     <h2>Inicio de Sesión</h2>
                     <LblLoginStyled> 
                         <IconRegSpanStyled> <FaUser /></IconRegSpanStyled>
-                        <LoginInput name= "name" type='text' placeholder="Nombre"/>
+                        <LoginInput name= "email" type='text' placeholder="Email"/>
                     </LblLoginStyled>
                     <LblLoginStyled>
                         <IconRegSpanStyled> <FaLock /></IconRegSpanStyled>
-                        <LoginInput name= "password" type='password' placeholder="Contraseña"/>
+                        <PassContStyled>
+                            <LoginInput name="password" type={showPassword ? "text" : "password"} placeholder="Nueva Contraseña" />
+                            <EyesBtnStyled type="button" onClick={toggleShowPassword}>
+                                {showPassword ? <FaEyeSlash /> : <FaEye />}
+                            </EyesBtnStyled>
+                        </PassContStyled>
+                        
                     </LblLoginStyled>
                     <TxtStyled>No tienes cuentas?  
                         <LinkTxtStyled to='register'>Registrate</LinkTxtStyled>
                     </TxtStyled>
                     <Submit>Ingresar</Submit>
+                    <InputSpan>
+                        <LinkTxtStyled to='/changepass'>Olvidaste tu contraseña?</LinkTxtStyled>
+                    </InputSpan>
                 </LoggintFormStyled>
                 
                 <InfotextContStyled>
@@ -50,6 +89,7 @@ const Login = () => {
                 </InfotextContStyled>
                 
             </LogginConteinerStyled>
+        
             </Formik>            
         </WrapperLoginStyled>
     )

@@ -26,8 +26,9 @@ export const InputLabelStyled = styled.label`
 export const InputStyled = styled.input`
   background: #081b29;
   outline: none;
-  border: ${({ isError }) => (isError ? '2px solid #0ef' : 'none')};
-  border-bottom:2px solid #0ef;
+  /* border: ${({ isError }) => (isError ? '2px solid #0ef' : 'none')}; */
+  border: none;
+  border-bottom:${({ isError }) => (isError ? '2px solid red' : '2px solid #0ef')};
   border-radius: 8px;
   height: 30px;
   padding:0.5rem 1rem;

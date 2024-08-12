@@ -12,7 +12,7 @@ export const registerInitialValues = {
 };
 
 export const loginInitialValues = {
-  name: "",
+  email: "",
   password: "",
 };
 
@@ -20,4 +20,21 @@ export const contacInitialValues = {
   name: "",
   email: "",
 };
+
+export const verifyInitialValues = {
+  verified: "",
+  email: "",
+};
+
+export const sendCodeValues = {
+  emai: "",
+};
+
+export const resetPasswordValues = {
+  emai: "",
+  resetCode:"",
+  password: "",
+  newpassword: "",
+};
+
 

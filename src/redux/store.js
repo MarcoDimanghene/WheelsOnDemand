@@ -6,6 +6,7 @@ import storage from 'redux-persist/lib/storage';
 import producsReducer from "./products/productsSlice";
 import cartReducer from "./cart/cartSlice";
 import modalnavReducer from "./navmodal/modalnavlink";
+import userReducer from "./user/userSlice"
 
 
 
@@ -16,12 +17,13 @@ const reducers = combineReducers ({
     categories: categoriesReducers,
     cart: cartReducer,
     modalnav: modalnavReducer,
+    user: userReducer
 });
 
 const persistConfig = {
     key: "root",
     storage,
-    whitelist: ['cart', ],
+    whitelist: ['cart', 'user'],
 };
 
 const persistedReducer  = persistReducer(persistConfig, reducers);

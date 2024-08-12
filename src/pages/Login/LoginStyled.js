@@ -13,7 +13,7 @@ export const WrapperLoginStyled = styled(motion.div) `
     @media (max-width: 600px) {
         height:100%
     }
-    
+
 `
 export const LogginConteinerStyled = styled.div `
     width:80%;
@@ -118,3 +118,12 @@ export const ButtonUserStyled = styled(motion.button) `
         opacity: 50%;
         scale: 1.1;
     }`;
+
+export const EyesBtnStyled = styled.button `
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+    position:absolute;
+    `

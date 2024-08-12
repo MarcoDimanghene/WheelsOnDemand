@@ -7,22 +7,19 @@ const INITIAL_STATE = {
 };
 
 export const productsSlice = createSlice({
-    name: "carsdata",
+    name: "products",
     initialState: INITIAL_STATE,
     reducers: {
-        getProducts: state  => {
-        return state ;
-        },
+        getProducts: state => state,
+
         selectProductById: (state, action) => {
-            const selectedId = action.payload;
-            state.selctid = selectedId;
+            state.selctid = action.payload;
         },
     }
 });
 
 
-
-
 export const { getProducts, selectProductById } = productsSlice.actions;
+
 
 export default productsSlice.reducer;

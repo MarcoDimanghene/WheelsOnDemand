@@ -9,7 +9,7 @@ import { BsFillInfoSquareFill } from 'react-icons/bs';
 import { GiExitDoor } from "react-icons/gi";
 
 
-const ModalUser = () => {
+const ModalMenu = () => {
     const { hidden } = useSelector(state => state.modalnav);
     const dispatch = useDispatch();
     
@@ -63,4 +63,4 @@ const ModalUser = () => {
     );
 };
 
-export default ModalUser;
+export default ModalMenu;

@@ -84,7 +84,7 @@ export const NavLinkStyled = styled(NavLink)`
     cursor: pointer;
         
     &:hover {
-        border-bottom: 2px solid #fff;
+        
         background-color: #000;
     }
     @media (max-width: 980px) {
@@ -102,10 +102,11 @@ export const NavLinkStyled = styled(NavLink)`
         font-weight: 300;
     }
 `
+
+
 export const IconStyled = styled.span`
-    margin:auto;
-    font-size: 1.2rem;
-    padding-right:10px;
+    padding:0px 2px;
+    font-size: 1.5rem;
     @media (max-width: 980px) {
         font-size: 1rem;
         font-weight: 200px;
@@ -179,18 +180,52 @@ export const LinksContainerStyled = styled.div`
     align-items: center;
     gap: 40px;
 `;
-
+export const UserdivStyled= styled.div`
+    display:flex;
+    align-items: center;
+    justify-content: center;
+`
 
 export const LinkContainerStyled = styled.div`
     display:flex;
     font-size: 1.2rem;
     color: #fff;
-    padding: 5px;
+    padding: 8px;
     border-radius:15px;
     &:hover {
         cursor: pointer;
         background-color: #000;
-        border-bottom: 2px solid #fff;
+        
     }
     
 `;
+
+export const UserNavLinkStyled = styled.div`
+    width:auto;
+    height:auto;
+    padding: 5px;
+    border-radius: 25%;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+        
+    &:hover {
+        
+        background-color: #000;
+    }
+    @media (max-width: 980px) {
+        font-size: 0.8rem;
+        font-weight: 200px;
+        
+    }
+    &.active {
+        color: #0ef;
+        background-color: gray;
+    }
+    a {
+        text-decoration:none;
+        color:white;
+        font-weight: 300;
+    }
+`

@@ -9,9 +9,11 @@ import Submit from "../../components/UI/Submit/Submit";
 import {registerInitialValues} from "../../formik/initialValues"
 import {registerValidationSchema} from "../../formik/validationSchema"
 import LoginInput from "../../components/UI/Input/Input";
+import { createUser } from "../../axios/axios-user";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
-    
+    const navigate = useNavigate()
     return (
     <WrapperRegisterStyled
         variants={FadeVariants}
@@ -21,7 +23,11 @@ const Register = () => {
         <Formik 
             initialValues={registerInitialValues}
             validationSchema={registerValidationSchema}
-            onSubmit={(values) => console.log(values)}
+            onSubmit={async(values, actions) => {
+                const user = await createUser (values.name, values.email,values.password);
+                actions.resetForm();
+                if (user) { navigate('/login')}
+            }}
         >
         <RegConteinerStyled>
             <RegInfoContStyled>

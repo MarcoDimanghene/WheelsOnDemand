@@ -7,7 +7,7 @@ import {
   InputStyled,
 } from './InputStyled';
 
-const LoginInput = ({ children, name, htmlFor, type, id, placeholder }) => {
+const LoginInput = ({ children, name, htmlFor, type, id, placeholder, readOnly }) => {
   return (
     <Field name={name}>
       {({ field, form: { errors, touched } }) => (
@@ -19,6 +19,7 @@ const LoginInput = ({ children, name, htmlFor, type, id, placeholder }) => {
             placeholder={placeholder}
             {...field}
             isError={errors[field.name] && touched[field.name]}
+            readOnly={readOnly}
           />
           <ErrorMessage name={field.name}>
             {message => <ErrorMessageStyled>{message}</ErrorMessageStyled>}

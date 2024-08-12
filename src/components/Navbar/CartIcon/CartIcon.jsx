@@ -19,7 +19,7 @@ const CartIcon = () => {
         onClick={() => dispatch(toggleHiddenCart())}
     >
         <FaShoppingCart />
-        <spam>{totalCartItems}</spam>
+        <span>{totalCartItems}</span>
         </LinkContainerStyled>
     );
 };
