@@ -3,38 +3,55 @@ import { createOrderFail, fetchOrdersFail, fetchOrdersStart, fetchOrdersSuccess 
 import { BASE_URL } from "../utils";
 
 export const getOrders = async (dispatch, currentUser) => {
+    if (!currentUser?.token) {
+        dispatch(fetchOrdersFail("El usuario no está autenticado"));
+        return;
+    }
+    
     dispatch(fetchOrdersStart());
 
     try {
         const orders = await axios.get(`${BASE_URL}orders`, {
-        headers: {
+            headers: {
                 'x-token': currentUser.token,
-        },
-    });
-        if (orders) {
-        dispatch(fetchOrdersSuccess(orders.data.data));
+            },
+        });
+
+        // Validar si la respuesta es correcta
+        if (orders.status === 200 && orders.data?.data) {
+            dispatch(fetchOrdersSuccess(orders.data.data));
+        } else {
+            dispatch(fetchOrdersFail("Error al obtener las órdenes"));
         }
+
     } catch (err) {
-        console.log(err);
-        dispatch(
-        fetchOrdersFail(
-            "Error en el usuario, debe iniciar sesión"
-            ))
+        console.error(err);
+        dispatch(fetchOrdersFail("Error en el usuario, debe iniciar sesión"));
     }
 }
 
 export const createOrder = async (order, dispatch, currentUser) => {
-    try {
-    const response = await axios.post(`${BASE_URL}orders`, order, {
-        headers: {
-        'x-token': currentUser.token,
-        },
-    });
-        if (response) {
-        getOrders(dispatch, currentUser);
-        }
-    } catch (err) {
-        console.log(err)
-        dispatch(createOrderFail());
+    if (!currentUser?.token) {
+        dispatch(createOrderFail("El usuario no está autenticado"));
+        return;
     }
-    };
+    
+    try {
+        const response = await axios.post(`${BASE_URL}orders`, order, {
+            headers: {
+                'x-token': currentUser.token,
+            },
+        });
+
+        // Validar si la respuesta es correcta
+        if (response.status === 201) {
+            await getOrders(dispatch, currentUser);
+        } else {
+            dispatch(createOrderFail("Error al crear la orden"));
+        }
+
+    } catch (err) {
+        console.error(err);
+        dispatch(createOrderFail("Error en la creación de la orden"));
+    }
+};

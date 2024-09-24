@@ -1,3 +1,6 @@
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+
 import {
     checkoutInitialValues,
     checkoutValidationSchema,
@@ -5,12 +8,11 @@ import {
   
 import Input from '../../UI/Input/Input';
 import Submit from '../../UI/Submit/Submit';
-import Loader from '../../UI/Loader/Loader';
+
   
 import { CheckoutDatosStyled, Formik, Form } from './CheckoutFormStyles';
 import { createOrder } from '../../../axios/axios-orders';
-import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+
 import { clearCart } from '../../../redux/cart/cartSlice';
   
   const CheckoutForm = ({ cartItems, price, shippingCost }) => {
@@ -25,7 +27,7 @@ import { clearCart } from '../../../redux/cart/cartSlice';
         <Formik
           initialValues={checkoutInitialValues}
           validationSchema={checkoutValidationSchema}
-          onSubmit={async(values)=>{
+          onSubmit={async values=>{
             const orderData= {
               items: cartItems,
               price, 
