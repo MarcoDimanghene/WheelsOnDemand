@@ -12,6 +12,8 @@ import ProtectedRoute from '../pages/ProtectedRoute/ProtectedRoute';
 import UserProfile from '../pages/UserPerfil/UserProfile';
 import ChangePass from '../pages/ChangePass/ChangePass';
 import VerifyAccount from '../pages/VerifyAccount/VerifyAccount';
+import MyOrders from '../pages/MyOrders/MyOrders';
+import Felicitaciones from '../pages/Felicitaciones/Felicitaciones';
 
 
 const Routes = () => {
@@ -25,8 +27,12 @@ const Routes = () => {
                 <Route path='perfil' element={<ProtectedRoute redirectTo='/login'>
                             <UserProfile/>
                         </ProtectedRoute>} />
+                <Route path='mis-ordenes' element={<ProtectedRoute redirectTo='/misordenes'>
+                            <MyOrders/>
+                        </ProtectedRoute>} />
                 <Route path='products' element={<Cars />} />
                 <Route path='info' element={<Info />} />
+                <Route path='/felicitaciones' element={<Felicitaciones />} />
                 <Route path='*' element={<PageNotFound />} />
                 <Route path='product/:id' element={<ProductDetails />} />
                 <Route path='changepass' element={<ChangePass/>} />

@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux"
 import CardProducts from "./CardProducts"
-import { CardsContainer } from "./CardProductsStyled"
+import { CardsContainer } from "./CardProductsStyled";
+
 
 
 

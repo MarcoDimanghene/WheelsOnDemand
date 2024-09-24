@@ -1,7 +1,18 @@
 export const formatDate = date => {
-  const fecha = date.split('T')[0];
-  const fechaLegible = fecha.split('-').reverse().join('/');
-  const hora = date.split('T')[1].split('.')[0];
-  const horaLegible = hora.split(':').slice(0, 2).join(':');
-  return `${fechaLegible} ${horaLegible}`;
+  if (date instanceof Date) {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0'); 
+    const day = String(date.getDate()).padStart(2, '0');
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+
+    const fechaLegible = `${day}/${month}/${year}`;
+    const horaLegible = `${hours}:${minutes}`;
+
+    return `${fechaLegible} ${horaLegible}`;
+  } else {
+    
+    throw new Error('El valor proporcionado no es un objeto Date válido');
+  }
 };
+

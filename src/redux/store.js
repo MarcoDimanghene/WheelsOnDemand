@@ -6,7 +6,8 @@ import storage from 'redux-persist/lib/storage';
 import producsReducer from "./products/productsSlice";
 import cartReducer from "./cart/cartSlice";
 import modalnavReducer from "./navmodal/modalnavlink";
-import userReducer from "./user/userSlice"
+import userReducer from "./user/userSlice";
+import orderReducer from "./orders/orderSlice";
 
 
 
@@ -17,7 +18,8 @@ const reducers = combineReducers ({
     categories: categoriesReducers,
     cart: cartReducer,
     modalnav: modalnavReducer,
-    user: userReducer
+    user: userReducer,
+    orders: orderReducer,
 });
 
 const persistConfig = {
