@@ -8,10 +8,12 @@ import {
     UsernameStyled,
 } from './ModelUserStyles';
 import { setCurrentUser, toggleMenuUserHidden } from '../../../redux/user/userSlice';
+import { useNavigate } from 'react-router-dom';
 
 const ModalUser = () => {
     const { currentUser, userhiddenMenu } = useSelector(state => state.user);
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     return (
         <AnimatePresence>
@@ -36,6 +38,7 @@ const ModalUser = () => {
                             onClick={() => {
                                 dispatch(setCurrentUser(null));
                                 dispatch(toggleMenuUserHidden());
+                                navigate('/');
                             }}
                         >
                             Cerrar Sesion

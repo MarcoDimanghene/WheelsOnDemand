@@ -12,6 +12,10 @@ export const ModalContainerStyled = styled(motion.div)`
     z-index: 98;
     border-radius: 1rem 0 0 1rem;
     padding: 2rem;
+    @media (max-width: 500px) {
+        width:300px;
+        
+        }
 
     & span {
     display: flex;

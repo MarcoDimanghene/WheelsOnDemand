@@ -15,11 +15,12 @@ import { createOrder } from '../../../axios/axios-orders';
 
 import { clearCart } from '../../../redux/cart/cartSlice';
   
-  const CheckoutForm = ({ cartItems, price, shippingCost }) => {
+  const CheckoutForm = ({ cartItems, price,  shippingCost }) => {
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const {currentUser} = useSelector(state => state.user)
+    
 
     return (
       <CheckoutDatosStyled>
@@ -28,15 +29,18 @@ import { clearCart } from '../../../redux/cart/cartSlice';
           initialValues={checkoutInitialValues}
           validationSchema={checkoutValidationSchema}
           onSubmit={async values=>{
-            const orderData= {
-              items: cartItems,
-              price, 
+            
+            const orderData = {
+              items: cartItems, // Cada ítem incluye su precio
               shippingCost,
-              total: price + shippingCost,
+              price,
+              total: shippingCost + price,
               shippingDetails: {...values}
             };
+            
 
             try {
+              
               await createOrder(orderData, dispatch, currentUser);
               navigate("/felicitaciones");
               dispatch(clearCart())

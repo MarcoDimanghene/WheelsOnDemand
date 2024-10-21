@@ -10,13 +10,14 @@ import { IdStyled, PedidoContainerStyled,
   TitleStyled, } from './MyOrdersStyled';
 
 const CardsMyOrders = ({createdAt, status, total, _id}) => {
+  
 
   const navigate = useNavigate()
   
   return (
-    <PedidoContainerStyled onClick={()=>navigate(`/resume/${_id}`)}>
+    <PedidoContainerStyled onClick={()=>navigate(`/resumen/${_id}`)}>
       <TextContainerStyled>
-        <TitleStyled>ID de la orden: {_id.slice(0, 7 )}</TitleStyled>
+        <TitleStyled>ID de la orden: #{_id.slice(0, 7)}</TitleStyled>
         <IdStyled>Fecha {formatDate(createdAt)} HS</IdStyled>
         <PriceStyled>{formatPrice(total)}</PriceStyled>
       </TextContainerStyled>

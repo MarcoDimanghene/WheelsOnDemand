@@ -12,14 +12,14 @@ import {
   ProductContainerStyled,
   TextContainerStyled,
   CardTitleStyled,
-  TextStyled,
+  
   PriceStyled,
   QuantityContainerStyled,
 } from './ModalCartStyles';
 import { addToCart, removeFromCart } from '../../../redux/cart/cartSlice';
 import { useDispatch } from 'react-redux';
 
-const ModalCartCard = ({ img1, name, desc, price, id, quantity}) => {
+const ModalCartCard = ({ img1, name,  price, id, quantity}) => {
   const dispatch = useDispatch();
 
   return (
@@ -27,7 +27,6 @@ const ModalCartCard = ({ img1, name, desc, price, id, quantity}) => {
       <img src={img1} alt={name} />
       <TextContainerStyled>
         <CardTitleStyled>{name}</CardTitleStyled>
-        <TextStyled>{desc}</TextStyled>
         <PriceStyled>{formatPrice(price)}</PriceStyled>
       </TextContainerStyled>
       <QuantityContainerStyled>
@@ -40,7 +39,7 @@ const ModalCartCard = ({ img1, name, desc, price, id, quantity}) => {
         <Count>{quantity}</Count>
         <Increase
           onClick={() =>
-            dispatch(addToCart({ img1, name, desc, price, id }))
+            dispatch(addToCart({ img1, name, price, id }))
           }
         >
           <BsPlusLg />

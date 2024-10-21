@@ -11,20 +11,21 @@ const MyOrders = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const currentUser = useSelector(state => state.user.currentUser);
-  const { orders, error } = useSelector(state => state.orders);
+  const { orders,  error } = useSelector(state => state.orders);
+
+  
 
   useEffect(() => {
     if (!orders) {
-      if (currentUser?.token) {
-        getOrders(dispatch, currentUser);
-      } else {
-        dispatch(fetchOrdersFail());
-        navigate('/login'); // Redirigir al login si no hay token
-      }
+      getOrders(dispatch, currentUser)
+    }
+
+    if (!currentUser?.token) {
+      dispatch(fetchOrdersFail());
     } else {
       error && dispatch(clearError());
     }
-  }, [currentUser?.token, orders, error, dispatch, navigate]);
+  }, [dispatch, currentUser?.token, orders, error]);
 
   return (
     <MisOrdenesContainerStyled>

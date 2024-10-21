@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const INITIAL_STATE = {
-    orders: [],
+    orders: null,
     loading: false,
     error: null,
 };
@@ -10,28 +10,46 @@ const ordersSlice = createSlice({
     name: "orders",
     initialState: INITIAL_STATE,
     reducers: {
-        createOrderFail: (state, action) => {
-            state.error = action.payload; 
+        createOrderFail: (state= INITIAL_STATE, action) => {
+            return{
+                ...state,
+                error: action.payload
+            } 
         },
         fetchOrdersSuccess: (state, action) => {
-            state.loading = false;        
-            state.error = null;           
-            state.orders = action.payload;
+            return{
+                ...state,
+                loading:false,
+                error: null,
+                orders: [...action.payload]
+            } 
         },
-        fetchOrdersFail: (state, action) => {
-            state.loading = false;        
-            state.error = action.payload; 
+        fetchOrdersFail: (state, action) =>{
+            return{
+                ...state,
+                loading:false,
+                error: action.payload
+            } 
         },
         fetchOrdersStart: (state) => {
-            state.loading = true;         
+            return{
+                ...state,
+                loading:true
+            }
         },
         clearError: (state) => {
-            state.error = null;           
+            return{
+                ...state,
+                error:null
+            }
         },
         clearOrders: (state) => {
-            state.orders = [];            
-        },
-    },
+            return{
+                ...state,
+                orders:null
+            }
+        }
+    }
 });
 
 
@@ -44,5 +62,5 @@ export const {
     clearOrders,
 } = ordersSlice.actions;
 
-// Exportación del reducer
+
 export default ordersSlice.reducer;

@@ -14,6 +14,7 @@ import ChangePass from '../pages/ChangePass/ChangePass';
 import VerifyAccount from '../pages/VerifyAccount/VerifyAccount';
 import MyOrders from '../pages/MyOrders/MyOrders';
 import Felicitaciones from '../pages/Felicitaciones/Felicitaciones';
+import Resumen from '../pages/Resumen/Resumen';
 
 
 const Routes = () => {
@@ -36,6 +37,7 @@ const Routes = () => {
                 <Route path='*' element={<PageNotFound />} />
                 <Route path='product/:id' element={<ProductDetails />} />
                 <Route path='changepass' element={<ChangePass/>} />
+                <Route path='/resumen/:orderId' element={<Resumen/>} />
 
                 <Route path='verifyaccount' element={<ProtectedRoute redirectTo='/login'>
                             <VerifyAccount/>

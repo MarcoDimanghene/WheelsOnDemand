@@ -30,7 +30,7 @@ function UserProfile() {
                 <PersonalDataStyled>
                     <Userbtn whileTap={{ scale: 0.75 }} onClick={() =>navigate("/verifyaccount")}>Validar Cuenta</Userbtn>
                     <Userbtn whileTap={{ scale: 0.75 }} onClick={() =>navigate("/changepass")}>Cambiar Contraseña</Userbtn>
-            </PersonalDataStyled>
+                </PersonalDataStyled>
             </DataContStyled>
         </ProfileConStyled>
             

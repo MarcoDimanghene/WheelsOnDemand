@@ -27,6 +27,11 @@ export const TilteStyled=styled.div`
     width:100%;
     border-bottom:2px solid #0ef;
     height:80px;
+    h2{
+        @media (max-width: 400px) {
+        font-size:1.2rem;
+        }
+    }
 `
 
 export const PersonalDataStyled = styled.div `
@@ -51,6 +56,7 @@ export const LblProfile = styled.input`
     &::placeholder {
         color: black;
     }
+
 `
 export const DataContStyled=styled.div`
     display:flex;

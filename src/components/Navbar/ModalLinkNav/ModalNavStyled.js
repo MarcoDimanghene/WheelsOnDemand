@@ -11,7 +11,7 @@ export const ModalContainerStyled = styled(motion.div)`
     right: 0;
     z-index: 98;
     border-radius: 1rem 0 0 1rem;
-    padding: 2rem;
+    padding:1rem;
     width:90%;
     margin: auto;
     display: flex;
@@ -23,7 +23,8 @@ export const ModalContainerStyled = styled(motion.div)`
 export const ModalLinkStyled = styled(Link)`
     background-color: rgba(8, 27, 41, 2);
     height: 30px;
-    width: 300px;
+    max-width: 300px;
+    width:80%;
     display: flex;
     align-items: center;
     justify-content: center;

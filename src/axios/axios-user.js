@@ -74,3 +74,4 @@ export const resetPassword = async(email, resetCode, newPassword)=>{
     }
     
 }
+

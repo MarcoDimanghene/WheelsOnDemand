@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const MisOrdenesContainerStyled = styled.div`
-  
   padding: 1rem;
   display: flex;
   justify-content: center;
@@ -43,8 +42,6 @@ export const IdStyled = styled.p`
 export const PriceStyled = styled.p`
   font-weight: 800;
   font-size: 2rem;
-  
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #fff;
   margin: 0;
 `;

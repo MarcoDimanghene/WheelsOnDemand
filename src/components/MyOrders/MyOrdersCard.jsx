@@ -5,21 +5,23 @@ import  Loader from "../UI/Loader/Loader"
 const MyOrdersCard = () => {
 
   const {orders, loading, error} = useSelector(state => state.orders);
+  
 
-  if (loading && !orders){
+  if (loading ){
     return <Loader styles={{height: "50px", with: "50px" }}/>
   }
 
   if (error){
-    return <h2> {error}</h2>
+    return <h2 style={{ textAlign: 'center' }}>{error}</h2>;
   }
 
   return (
     <MisOrdenesContainerStyled>
       {
-        orders?.length ? (
-          orders.map((order)=> {
-            return <CardsMyOrders {...order} key={order._id} />
+        Array.isArray(orders) && orders.length ? 
+        (
+          orders.map((orders)=> {
+            return <CardsMyOrders {...orders} key={orders._id} />
           })
         ) :(
           <h2>Haz tu primer pedido</h2>
