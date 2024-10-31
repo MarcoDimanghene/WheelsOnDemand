@@ -4,7 +4,7 @@ import { VaryfiFormStyled, VerifyContStyled } from "./VerifyAccountStyled";
 import { verifyInitialValues } from "../../formik/initialValues";
 import Submit from "../../components/UI/Submit/Submit";
 import { verifyValidationSchema } from "../../formik/validationSchema";
-import { verifyUser } from "../../axios/axios-user";
+import { resendVerificationCode, verifyUser } from "../../axios/axios-user";
 
 const VerifyAccount = () => {
     const handleVerify = async (values, { setSubmitting, setStatus }) => {
@@ -18,10 +18,14 @@ const VerifyAccount = () => {
             setSubmitting(false);
         }
     };
-    
+   
 
     return (
         <VerifyContStyled>
+            <div>
+            <p>¿No recibiste el código de verificación?</p>
+            <button onClick={()=>{}}>Reenviar código</button>
+            </div>
             <Formik
                 initialValues={verifyInitialValues}
                 validationSchema={verifyValidationSchema}

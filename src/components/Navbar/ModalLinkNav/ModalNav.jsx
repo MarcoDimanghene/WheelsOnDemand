@@ -17,7 +17,7 @@ const ModalMenu = () => {
         if (!hidden) {
             dispatch(toggleMenuHidden());
         }
-    }, [dispatch]);
+    }, [dispatch, hidden]);
 
     return (
         <>

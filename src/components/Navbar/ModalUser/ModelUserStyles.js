@@ -33,6 +33,7 @@ export const MenudivsStyled = styled.div `
 `
 
 export const LinkStyled = styled(Link)`
+    text-decoration: none;
     &:hover {
     opacity: 90%;
     }

@@ -46,6 +46,19 @@ export const verifyUser = async (email, code) => {
         }
     }
 };
+export const resendVerificationCode = async (email, code) => {
+    try {
+        const response = await axios.patch(`${BASE_URL}auth/verify`, { email, code });
+        return response.data;
+    } catch (error) {
+        console.log(error);
+        if (error.response && error.response.data && error.response.data.msg) {
+            throw new Error(error.response.data.msg);
+        } else {
+            throw new Error("Error desconocido");
+        }
+    }
+};
 
 export const requestPasswordReset = async (email) =>{
     try {
