@@ -33,7 +33,7 @@ const ModalMenu = () => {
                     animate={{ translateX: 0 }}
                     exit={{ translateX: 900 }}
                     transition={{ duration: 0.5 }}
-                    key='cart-user'
+                    key='modal-menu'
                     
                 >
 
