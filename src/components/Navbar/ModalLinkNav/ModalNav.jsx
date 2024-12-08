@@ -29,9 +29,9 @@ const ModalMenu = () => {
         <AnimatePresence>
             {!hidden && (
                 <ModalContainerStyled
-                    initial={{ translateX: 600 }}
+                    initial={{ translateX: 900 }}
                     animate={{ translateX: 0 }}
-                    exit={{ translateX: 600 }}
+                    exit={{ translateX: 900 }}
                     transition={{ duration: 0.5 }}
                     key='cart-user'
                     
