@@ -1,53 +1,69 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { AnimatePresence } from 'framer-motion';
-import {
-    HrStyled,
-    LinkStyled,
-    MenudivsStyled,
-    ModalContainerStyled,
-    UsernameStyled,
-} from './ModelUserStyles';
-import { setCurrentUser, toggleMenuUserHidden } from '../../../redux/user/userSlice';
-import { useNavigate } from 'react-router-dom';
+import { IconModalStyled, MenuModalOverlayStyled, ModalContainerStyled, ModalLinkStyled } from './ModalNavStyled';
+import { useEffect } from 'react';
+import { toggleMenuHidden } from '../../../redux/navmodal/modalnavlink';
+import {BiSolidHome} from "react-icons/bi"
+import {AiTwotoneCar} from "react-icons/ai"
+import { BsFillInfoSquareFill } from 'react-icons/bs';
+import { GiExitDoor } from "react-icons/gi";
 
-const ModalUser = () => {
-    const { currentUser, userhiddenMenu } = useSelector(state => state.user);
+
+const ModalMenu = () => {
+    const { hidden } = useSelector(state => state.modalnav);
     const dispatch = useDispatch();
-    const navigate = useNavigate();
+
+    
+    useEffect(() => {
+        if (!hidden) {
+            console.log("Menú abierto");
+        } else {
+            console.log("Menú cerrado");
+        }
+    }, [hidden]);
 
     return (
-        <AnimatePresence>
-            {!userhiddenMenu && (
-                <ModalContainerStyled
-                    initial={{ translateX: 800 }}
-                    animate={{ translateX: 0 }}
-                    exit={{ translateX: 800 }}
-                    transition={{ duration: 0.8 }}
-                    key='cart-user'
-                >
-                    <UsernameStyled>{`Hola ${currentUser?.nombre}!!`}</UsernameStyled>
-                    <HrStyled />
-                    <MenudivsStyled>
-                        <LinkStyled to='/perfil' onClick={() => dispatch(toggleMenuUserHidden())}>
-                            Perfil
-                        </LinkStyled>
-                        <LinkStyled to='/mis-ordenes' onClick={() => dispatch(toggleMenuUserHidden())}>
-                            Mis Ordenes
-                        </LinkStyled>
-                        <span
-                            onClick={() => {
-                                dispatch(setCurrentUser(null));
-                                dispatch(toggleMenuUserHidden());
-                                navigate('/');
-                            }}
-                        >
-                            Cerrar Sesion
-                        </span>
-                    </MenudivsStyled>
+        <>
+        {!hidden && (
+                <MenuModalOverlayStyled
+                    onClick={() => dispatch(toggleMenuHidden())}
+                    isHidden={hidden}
+                />
+            )}
+            <AnimatePresence>
+                {!hidden && (
+                    <ModalContainerStyled
+                        initial={{ translateX: 700 }}
+                        animate={{ translateX: 0 }}
+                        exit={{ translateX: 700 }}
+                        transition={{ duration: 0.6 }}
+                        key="modal-menu"
+                    >
+
+                    <ModalLinkStyled  to='/' onClick={() => {dispatch(toggleMenuHidden());}}> 
+                            <IconModalStyled whileTap={{scale: 0.95}}> <BiSolidHome />  </IconModalStyled>
+                            Inicio
+                    </ModalLinkStyled>
+                    <ModalLinkStyled to='products' onClick={() => {dispatch(toggleMenuHidden());}}>
+                        <IconModalStyled whileTap={{scale: 0.95}}> <AiTwotoneCar/> </IconModalStyled>
+                        Vehiculos
+                    </ModalLinkStyled>
+                    <ModalLinkStyled to='info' onClick={() => {dispatch(toggleMenuHidden());}}>
+                        <IconModalStyled whileTap={{scale: 0.95}}> <BsFillInfoSquareFill/> </IconModalStyled> 
+                        Info y Contacto 
+                    </ModalLinkStyled>
+                    <ModalLinkStyled onClick={() => {dispatch(toggleMenuHidden());}}>
+                        <IconModalStyled whileTap={{scale: 0.95}} >
+                        <GiExitDoor />
+                        </IconModalStyled>
+                        Salir
+                    </ModalLinkStyled>
+                    
                 </ModalContainerStyled>
             )}
         </AnimatePresence>
+        </>
     );
 };
 
-export default ModalUser;
+export default ModalMenu;
