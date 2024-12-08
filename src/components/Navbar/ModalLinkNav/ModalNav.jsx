@@ -12,30 +12,33 @@ import { GiExitDoor } from "react-icons/gi";
 const ModalMenu = () => {
     const { hidden } = useSelector(state => state.modalnav);
     const dispatch = useDispatch();
+
     
     useEffect(() => {
         if (!hidden) {
-            dispatch(toggleMenuHidden());
+            console.log("Menú abierto");
+        } else {
+            console.log("Menú cerrado");
         }
-    }, [dispatch, hidden]);
+    }, [hidden]);
 
     return (
         <>
         {!hidden && (
-            <MenuModalOverlayStyled onClick={()=>dispatch(toggleMenuHidden())}
-            isHidden={hidden}
-            />
-        )}
-        <AnimatePresence>
-            {!hidden && (
-                <ModalContainerStyled
-                    initial={{ translateX: 900 }}
-                    animate={{ translateX: 0 }}
-                    exit={{ translateX: 900 }}
-                    transition={{ duration: 0.5 }}
-                    key='cart-user'
-                    
-                >
+                <MenuModalOverlayStyled
+                    onClick={() => dispatch(toggleMenuHidden())}
+                    isHidden={hidden}
+                />
+            )}
+            <AnimatePresence>
+                {!hidden && (
+                    <ModalContainerStyled
+                        initial={{ translateX: 700 }}
+                        animate={{ translateX: 0 }}
+                        exit={{ translateX: 700 }}
+                        transition={{ duration: 0.6 }}
+                        key="modal-menu"
+                    >
 
                     <ModalLinkStyled  to='/' onClick={() => {dispatch(toggleMenuHidden());}}> 
                             <IconModalStyled whileTap={{scale: 0.95}}> <BiSolidHome />  </IconModalStyled>

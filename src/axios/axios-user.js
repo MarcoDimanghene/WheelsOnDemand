@@ -60,6 +60,19 @@ export const resendVerificationCode = async (email, code) => {
     }
 };
 
+export const requestPasswordReset = async (email) =>{
+    try {
+        const response = await axios.post(`${BASE_URL}auth/requestpassword`, { email });
+        return response.data;
+    } catch (error) {
+        console.log(error)
+        if (error.response && error.response.data && error.response.data.msg) {
+            throw new Error(error.response.data.msg);
+        } else {
+            throw new Error("Error desconocido");
+        }
+    }
+}
 export const resetPassword = async(email, resetCode, newPassword)=>{
     try {
         const response = await axios.post(`${BASE_URL}auth/resetpassword`, { email, resetCode, newPassword });
@@ -74,4 +87,3 @@ export const resetPassword = async(email, resetCode, newPassword)=>{
     }
     
 }
-
