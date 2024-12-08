@@ -1,12 +1,12 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { AnimatePresence } from 'framer-motion';
-import { IconModalStyled, MenuModalOverlayStyled, ModalContainerStyled, ModalLinkStyled } from './ModalNavStyled';
 import { useEffect } from 'react';
 import { toggleMenuHidden } from '../../../redux/navmodal/modalnavlink';
 import {BiSolidHome} from "react-icons/bi"
 import {AiTwotoneCar} from "react-icons/ai"
 import { BsFillInfoSquareFill } from 'react-icons/bs';
 import { GiExitDoor } from "react-icons/gi";
+import { IconModalStyled, MenuModalOverlayStyled, ModalContainerStyled, ModalLinkStyled } from '../ModalLinkNav/ModalNavStyled';
 
 
 const ModalMenu = () => {
