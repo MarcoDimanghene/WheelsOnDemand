@@ -33,6 +33,8 @@ export const ModalLinkStyled = styled(Link)`
     box-shadow: 0 0 15px #0ef;
     border: 2px solid #0ef;
     margin-top: 15px;
+    text-decoration:none;
+    color:white;
 `
 export const IconModalStyled = styled(motion.div)`
     font-size: 1.2rem;

@@ -19,8 +19,10 @@ import ModalMenu from "./ModalLinkNav/ModalNav";
 import ModalUser from "./ModalUser/ModalUser";
 
 
+
 function Navbar() {
     const currentUser = useSelector(state => state.user.currentUser);
+    
     const dispatch = useDispatch();
     const navigate = useNavigate();
     return (

@@ -10,8 +10,6 @@ import userReducer from "./user/userSlice";
 import orderReducer from "./orders/orderSlice";
 
 
-
-
 const reducers = combineReducers ({
     recommended: recommendedReducer,
     products: producsReducer,

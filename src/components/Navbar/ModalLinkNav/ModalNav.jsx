@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { AnimatePresence } from 'framer-motion';
 import { IconModalStyled, MenuModalOverlayStyled, ModalContainerStyled, ModalLinkStyled } from './ModalNavStyled';
-import { useEffect } from 'react';
+
 import { toggleMenuHidden } from '../../../redux/navmodal/modalnavlink';
 import {BiSolidHome} from "react-icons/bi"
 import {AiTwotoneCar} from "react-icons/ai"
@@ -12,15 +12,8 @@ import { GiExitDoor } from "react-icons/gi";
 const ModalMenu = () => {
     const { hidden } = useSelector(state => state.modalnav);
     const dispatch = useDispatch();
-
     
-    useEffect(() => {
-        if (!hidden) {
-            console.log("Menú abierto");
-        } else {
-            console.log("Menú cerrado");
-        }
-    }, [hidden]);
+    
 
     return (
         <>
